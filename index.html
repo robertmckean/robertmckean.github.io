@@ -2,11 +2,850 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Robert McKean</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Robert McKean and Global Active: executive technical advisory, fractional CTO support, AI systems architecture, and engineering execution.">
+  <title>Global Active AI | Robert McKean</title>
+  <style>
+    :root {
+      --bg: #f6f4ef;
+      --surface: #ffffff;
+      --ink: #202426;
+      --muted: #5d666d;
+      --line: #d8d4cb;
+      --navy: #1f3545;
+      --blue: #2563a6;
+      --green: #2f6f5e;
+      --clay: #9a5335;
+      --gold: #b9852c;
+      --soft-blue: #e8eef5;
+      --soft-green: #e7efe9;
+      --soft-clay: #f2e7df;
+      --max: 1160px;
+      --radius: 8px;
+      --shadow: 0 16px 40px rgba(30, 36, 38, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.55;
+    }
+
+    a {
+      color: var(--blue);
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 16px;
+      z-index: 10;
+      padding: 10px 14px;
+      color: #ffffff;
+      background: var(--navy);
+      border-radius: var(--radius);
+    }
+
+    .skip-link:focus {
+      left: 16px;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+      border-bottom: 1px solid rgba(32, 36, 38, 0.12);
+      background: rgba(246, 244, 239, 0.94);
+      backdrop-filter: blur(12px);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+      padding: 14px 0;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      color: var(--ink);
+      line-height: 1.1;
+    }
+
+    .brand strong {
+      font-size: 1rem;
+      letter-spacing: 0;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .nav-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: 8px 18px;
+      font-size: 0.92rem;
+    }
+
+    .nav-links a {
+      color: var(--ink);
+    }
+
+    main {
+      overflow: hidden;
+    }
+
+    section {
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+      padding: 64px 0;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(340px, 0.9fr);
+      gap: 48px;
+      align-items: center;
+      padding-top: 16px;
+      padding-bottom: 18px;
+    }
+
+    .eyebrow {
+      margin: 0 0 16px;
+      color: var(--green);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      margin: 0;
+      line-height: 1.12;
+      letter-spacing: 0;
+    }
+
+    h1 {
+      max-width: 760px;
+      font-size: clamp(2.35rem, 4.8vw, 4.35rem);
+      font-weight: 750;
+    }
+
+    h2 {
+      font-size: clamp(2rem, 4vw, 3.2rem);
+    }
+
+    h3 {
+      font-size: 1.14rem;
+    }
+
+    .lead {
+      max-width: 720px;
+      margin: 24px 0 0;
+      color: var(--muted);
+      font-size: clamp(1.08rem, 2vw, 1.28rem);
+    }
+
+    .hero-actions,
+    .link-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 11px 16px;
+      border: 1px solid var(--navy);
+      border-radius: var(--radius);
+      color: var(--ink);
+      background: transparent;
+      font-weight: 700;
+    }
+
+    .button.primary {
+      color: #ffffff;
+      background: var(--navy);
+    }
+
+    .button.secondary {
+      border-color: var(--line);
+      background: var(--surface);
+    }
+
+    .button:hover,
+    .button:focus {
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .system-panel {
+      position: relative;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+      box-shadow: var(--shadow);
+    }
+
+    .panel-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      padding: 4px 10px;
+      border: 1px solid rgba(47, 111, 94, 0.28);
+      border-radius: 999px;
+      color: var(--green);
+      background: var(--soft-green);
+      font-size: 0.8rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .signal-grid {
+      display: grid;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .signal {
+      display: grid;
+      grid-template-columns: 12px minmax(0, 1fr);
+      gap: 12px;
+      align-items: start;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: #fbfaf7;
+    }
+
+    .signal::before {
+      width: 12px;
+      height: 12px;
+      margin-top: 6px;
+      border-radius: 50%;
+      background: var(--blue);
+      content: "";
+    }
+
+    .signal:nth-child(2)::before {
+      background: var(--green);
+    }
+
+    .signal:nth-child(3)::before {
+      background: var(--clay);
+    }
+
+    .signal:nth-child(4)::before {
+      background: var(--gold);
+    }
+
+    .signal strong {
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .signal span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .section-intro {
+      display: grid;
+      grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+      gap: 36px;
+      align-items: start;
+      margin-bottom: 30px;
+    }
+
+    .section-intro p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+
+    .band {
+      width: 100%;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: #ece9e1;
+    }
+
+    .band section {
+      padding: 58px 0;
+    }
+
+    .pillars,
+    .project-grid,
+    .artifact-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      min-height: 100%;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+
+    .card p {
+      margin: 12px 0 0;
+      color: var(--muted);
+    }
+
+    .meta {
+      display: inline-flex;
+      margin-bottom: 14px;
+      color: var(--clay);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      min-height: 360px;
+    }
+
+    .project-card.featured {
+      grid-column: span 2;
+      background: var(--soft-blue);
+    }
+
+    .project-card ul,
+    .bio-points,
+    .artifact-list {
+      margin: 0;
+      padding-left: 20px;
+      color: var(--muted);
+    }
+
+    .project-card li + li,
+    .bio-points li + li,
+    .artifact-list li + li {
+      margin-top: 8px;
+    }
+
+    .project-card .link-row {
+      margin-top: auto;
+    }
+
+    .pending {
+      color: var(--muted);
+      border-color: var(--line);
+      background: #f8f6f0;
+    }
+
+    .bio-layout {
+      display: grid;
+      grid-template-columns: minmax(260px, 0.42fr) minmax(0, 0.58fr);
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .bio-card {
+      background: var(--navy);
+      color: #ffffff;
+    }
+
+    .bio-card p {
+      color: rgba(255, 255, 255, 0.78);
+    }
+
+    .initials {
+      display: grid;
+      width: 88px;
+      height: 88px;
+      margin-bottom: 24px;
+      place-items: center;
+      border: 1px solid rgba(255, 255, 255, 0.28);
+      border-radius: 50%;
+      color: #ffffff;
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    .artifact-grid {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .artifact {
+      display: flex;
+      flex-direction: column;
+      min-height: 174px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+
+    .artifact span {
+      margin-top: auto;
+      color: var(--muted);
+      font-size: 0.86rem;
+    }
+
+    .contact {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(280px, 0.48fr);
+      gap: 32px;
+      align-items: start;
+    }
+
+    .contact-panel {
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: var(--surface);
+    }
+
+    .contact-list {
+      display: grid;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .contact-list a,
+    .contact-list span {
+      display: block;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    .site-footer .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      width: min(100% - 32px, var(--max));
+      margin: 0 auto;
+      padding: 28px 0;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 920px) {
+      .hero,
+      .section-intro,
+      .bio-layout,
+      .contact {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .pillars,
+      .project-grid,
+      .artifact-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .project-card.featured {
+        grid-column: span 2;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+
+      section {
+        padding: 46px 0;
+      }
+
+      .hero {
+        gap: 30px;
+        padding-top: 34px;
+      }
+
+      .pillars,
+      .project-grid,
+      .artifact-grid,
+      .project-card.featured {
+        grid-template-columns: 1fr;
+        grid-column: auto;
+      }
+
+      .button {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>Robert McKean</h1>
-  <p>Executive Technical Advisor | Fractional CTO | AI Architecture</p>
-  <p>Site coming soon.</p>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="brand" href="#top" aria-label="Global Active AI home">
+        <strong>Global Active AI</strong>
+        <span>Robert McKean</span>
+      </a>
+      <div class="nav-links">
+        <a href="#work">Work</a>
+        <a href="#projects">Projects</a>
+        <a href="#artifacts">Artifacts</a>
+        <a href="#bio">Bio</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div>
+        <p class="eyebrow">Fractional CTO | Executive Technical Advisor | AI Systems Architecture</p>
+        <h1>Executive technical advisory for AI systems architecture.</h1>
+        <p class="lead">
+          Global Active is the public portfolio and advisory platform for Robert McKean:
+          executive-level engineering accountability combined with hands-on AI systems work,
+          architecture discipline, and practical feasibility evaluation.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#projects">Review Projects</a>
+          <a class="button secondary" href="mailto:robert@mckean.com">Contact Robert</a>
+          <a class="button secondary" href="https://github.com/robertmckean">GitHub</a>
+        </div>
+      </div>
+
+      <aside class="system-panel" aria-label="Portfolio focus areas">
+        <div class="panel-title">
+          <h2>Portfolio Map</h2>
+          <span class="status">Draft v1</span>
+        </div>
+        <div class="signal-grid">
+          <div class="signal">
+            <div>
+              <strong>Executive accountability</strong>
+              <span>VP and Sr. Director-level ownership of engineering execution, product readiness, validation, and shipment risk.</span>
+            </div>
+          </div>
+          <div class="signal">
+            <div>
+              <strong>Hands-on AI systems</strong>
+              <span>Recent implementation work across retrieval, evidence systems, model pipelines, dataset engineering, and evaluation.</span>
+            </div>
+          </div>
+          <div class="signal">
+            <div>
+              <strong>Technical artifacts</strong>
+              <span>Public links to repositories, architecture docs, diagrams, presentations, PDFs, datasets, and project notes.</span>
+            </div>
+          </div>
+          <div class="signal">
+            <div>
+              <strong>Feasibility before scale</strong>
+              <span>Assessment of architecture, data constraints, model behavior, implementation path, and production risk.</span>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <div class="band">
+      <section id="work">
+        <div class="section-intro">
+          <h2>What This Site Needs To Establish</h2>
+          <p>
+            This page should be a credible entry point for executives and technical leaders
+            who need help judging whether an AI or software initiative is real, feasible,
+            properly scoped, and ready for serious execution.
+          </p>
+        </div>
+
+        <div class="pillars">
+          <article class="card">
+            <span class="meta">Advisory</span>
+            <h3>Executive technical judgment</h3>
+            <p>
+              Architecture review, execution risk assessment, stop-ship thinking,
+              technical governance, and practical guidance before teams commit to scale.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="meta">Architecture</span>
+            <h3>AI and software systems</h3>
+            <p>
+              Retrieval systems, validation workflows, model pipelines, dataset design,
+              desktop systems, secure file architectures, and production-oriented software.
+            </p>
+          </article>
+
+          <article class="card">
+            <span class="meta">Implementation</span>
+            <h3>Proof through artifacts</h3>
+            <p>
+              The portfolio is organized around working systems, repositories,
+              diagrams, technical documentation, presentations, and concrete project evidence.
+            </p>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <section id="projects">
+      <div class="section-intro">
+        <h2>Current Proof Of Work</h2>
+        <p>
+          The project pages will become the evidence base for the site. For now,
+          this landing page names the work, states why it matters, and reserves
+          space for the technical documentation that will follow.
+        </p>
+      </div>
+
+      <div class="project-grid">
+        <article class="card project-card featured">
+          <span class="meta">Lead Project</span>
+          <h3>Brain Dump / AI Memory Evidence System</h3>
+          <p>
+            An evidence-grounded organizational memory system for technical teams.
+            The system works from a defined corpus, reconstructs evidence across
+            artifacts, and links answers back to actual source records.
+          </p>
+          <ul>
+            <li>Retrieval and evidence synthesis across source artifacts.</li>
+            <li>Chronology reconstruction and source-linked answers.</li>
+            <li>Public Mayfield demo uses a synthetic and intentionally limited data set.</li>
+            <li>Full-corpus deployments would provide richer and more detailed evidence coverage.</li>
+          </ul>
+          <div class="link-row">
+            <a class="button primary" href="https://mayfield.braindump.vip">Live Demo</a>
+            <a class="button secondary pending" href="#">Overview pending</a>
+            <a class="button secondary pending" href="#">Architecture pending</a>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <span class="meta">ML System</span>
+          <h3>drums2midi</h3>
+          <p>
+            An end-to-end audio-to-MIDI machine learning system demonstrating
+            dataset engineering, signal processing, PyTorch implementation,
+            custom model architecture, training, and evaluation.
+          </p>
+          <ul>
+            <li>Raw drum audio to structured MIDI events.</li>
+            <li>Time-aligned audio/MIDI training data.</li>
+            <li>Trainable audio front end and custom detection model.</li>
+          </ul>
+          <div class="link-row">
+            <a class="button secondary" href="https://github.com/robertmckean/drums_to_midi">GitHub</a>
+            <a class="button secondary pending" href="#">PDF pending</a>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <span class="meta">Reliability Concept</span>
+          <h3>Hallucination Index / Validation Concepts</h3>
+          <p>
+            Planned evaluation and validation material focused on AI reliability,
+            financial hallucination risk, enterprise governance, and practical
+            evidence-checking workflows.
+          </p>
+          <ul>
+            <li>Validation framework outline.</li>
+            <li>Risk examples and enterprise scenarios.</li>
+            <li>Workflow diagrams and evaluation notes.</li>
+          </ul>
+          <div class="link-row">
+            <a class="button secondary pending" href="#">Concept pending</a>
+          </div>
+        </article>
+
+        <article class="card project-card">
+          <span class="meta">Future Work</span>
+          <h3>Additional AI Systems Projects</h3>
+          <p>
+            Reserved space for future public artifacts that demonstrate practical
+            engineering judgment across AI feasibility, system architecture,
+            evaluation, and implementation discipline.
+          </p>
+          <ul>
+            <li>Project summaries.</li>
+            <li>Architecture diagrams.</li>
+            <li>GitHub and documentation links.</li>
+          </ul>
+          <div class="link-row">
+            <a class="button secondary pending" href="#">Roadmap pending</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="band">
+      <section id="artifacts">
+        <div class="section-intro">
+          <h2>Artifact Index</h2>
+          <p>
+            This section is the placeholder map for the supporting documentation.
+            As each asset is finalized, the placeholder can be replaced with a
+            direct link.
+          </p>
+        </div>
+
+        <div class="artifact-grid" aria-label="Public artifact placeholders">
+          <a class="artifact" href="https://github.com/robertmckean">
+            <strong>GitHub Profile</strong>
+            <span>Public repositories and source code</span>
+          </a>
+          <a class="artifact" href="https://github.com/robertmckean/drums_to_midi">
+            <strong>drums2midi Repository</strong>
+            <span>Published ML project repository</span>
+          </a>
+          <a class="artifact" href="#">
+            <strong>CV / Experience</strong>
+            <span>Pending public page or PDF</span>
+          </a>
+          <a class="artifact" href="#">
+            <strong>Brain Dump Overview</strong>
+            <span>Pending project page</span>
+          </a>
+          <a class="artifact" href="#">
+            <strong>Architecture Docs</strong>
+            <span>Pending diagrams and system notes</span>
+          </a>
+          <a class="artifact" href="#">
+            <strong>Dataset Docs</strong>
+            <span>Pending dataset notes and constraints</span>
+          </a>
+          <a class="artifact" href="#">
+            <strong>Training Docs</strong>
+            <span>Pending training workflow material</span>
+          </a>
+          <a class="artifact" href="#">
+            <strong>Presentations</strong>
+            <span>Pending slide decks and PDFs</span>
+          </a>
+        </div>
+      </section>
+    </div>
+
+    <section id="bio">
+      <div class="section-intro">
+        <h2>Professional Background</h2>
+        <p>
+          The bio should make the credibility story explicit: executive
+          accountability, recent hands-on AI systems work, and formal machine
+          learning grounding in the same profile.
+        </p>
+      </div>
+
+      <div class="bio-layout">
+        <article class="card bio-card">
+          <div class="initials" aria-hidden="true">RM</div>
+          <h3>Robert McKean</h3>
+          <p>
+            Executive Technical Advisor and Fractional CTO focused on AI
+            architecture, feasibility, engineering execution, and practical
+            validation.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Positioning Draft</h3>
+          <p>
+            Robert sits in the overlap between VP/Sr. Director-level engineering
+            accountability and direct AI systems implementation. He is not an
+            AI strategy-only advisor, and not a junior model builder without
+            production judgment.
+          </p>
+          <ul class="bio-points">
+            <li>Former VP and Sr. Director-level engineering leader with global product, validation, and shipment accountability.</li>
+            <li>Hands-on AI systems builder with recent work in retrieval, evidence systems, audio ML, dataset engineering, and model pipelines.</li>
+            <li>Formal ML grounding through Andrew Ng machine learning coursework, deep learning, TensorFlow, and data science certifications.</li>
+            <li>Advises teams on feasibility, architecture, implementation path, validation discipline, and execution risk.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <div class="band">
+      <section id="contact" class="contact">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Discuss AI feasibility, architecture, or engineering execution.</h2>
+          <p class="lead">
+            Use this site as a starting point for reviewing the work. The project
+            pages and artifact links will fill in as the public documentation is
+            finalized.
+          </p>
+        </div>
+
+        <aside class="contact-panel" aria-label="Contact links">
+          <h3>Direct Links</h3>
+          <div class="contact-list">
+            <a href="mailto:robert@mckean.com">robert@mckean.com</a>
+            <a href="https://www.linkedin.com/in/robert-mckean-ai/">LinkedIn</a>
+            <a href="https://github.com/robertmckean">GitHub</a>
+            <span>CV link pending</span>
+          </div>
+        </aside>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>Global Active AI | Robert McKean</span>
+      <span>Executive Technical Advisory | Fractional CTO | AI Systems Architecture</span>
+    </div>
+  </footer>
 </body>
 </html>
