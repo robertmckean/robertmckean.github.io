@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Global Active Key-Person Risk Brief data security flow from approved client records to source-cited deliverables and deletion confirmation.">
+  <title>Data Security Flow | Global Active</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #fffaf0;
+      --ink: #202828;
+      --muted: #64706e;
+      --line: #253230;
+      --green: #2d7a55;
+      --blue: #2f74b7;
+      --teal: #1e9188;
+      --gold: #d8942d;
+      --coral: #d95d55;
+      --purple: #7662b8;
+      --card: #fffdf8;
+      --shadow: 0 12px 0 rgba(32, 40, 40, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 8% 8%, rgba(216, 148, 45, 0.16), transparent 26%),
+        radial-gradient(circle at 88% 12%, rgba(47, 116, 183, 0.14), transparent 28%),
+        linear-gradient(135deg, #f8f7f3, #f3f0e8);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.35;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus { text-decoration: underline; }
+
+    .page {
+      width: min(100% - 34px, 1220px);
+      margin: 0 auto;
+      padding: 22px 0 28px;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: center;
+      padding-bottom: 14px;
+      font-size: 0.92rem;
+      color: var(--muted);
+    }
+
+    .brand {
+      color: var(--ink);
+      font-weight: 800;
+    }
+
+    .nav {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .poster {
+      overflow: hidden;
+      border: 3px solid var(--line);
+      border-radius: 22px;
+      background: var(--paper);
+      box-shadow: var(--shadow);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 20px;
+      align-items: center;
+      padding: 24px 28px 18px;
+      border-bottom: 3px solid var(--line);
+      background: linear-gradient(90deg, #fffaf0, #eef8f6);
+    }
+
+    .eyebrow {
+      color: var(--green);
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 7px 0 0;
+      font-family: "Inter", Arial, Helvetica, sans-serif;
+      font-size: clamp(2rem, 5.2vw, 4.1rem);
+      line-height: 0.98;
+      letter-spacing: 0;
+    }
+
+    .subtitle {
+      max-width: 830px;
+      margin: 12px 0 0;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .hero-badge {
+      width: 156px;
+      min-height: 156px;
+      display: grid;
+      place-items: center;
+      border: 3px solid var(--line);
+      border-radius: 50%;
+      background: #ffffff;
+      box-shadow: 0 8px 0 rgba(32, 40, 40, 0.1);
+      text-align: center;
+      font-weight: 900;
+      transform: rotate(3deg);
+    }
+
+    .hero-badge span {
+      display: block;
+      color: var(--green);
+      font-size: 2.1rem;
+      line-height: 1;
+    }
+
+    .flow {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 14px;
+      padding: 26px;
+    }
+
+    .flow::before {
+      content: "";
+      position: absolute;
+      left: 52px;
+      right: 52px;
+      top: 112px;
+      height: 14px;
+      border: 3px solid var(--line);
+      border-radius: 999px;
+      background: repeating-linear-gradient(90deg, #ffffff 0 34px, #f4dca8 34px 68px);
+      z-index: 0;
+    }
+
+    .stage {
+      position: relative;
+      z-index: 1;
+      min-height: 365px;
+      display: grid;
+      grid-template-rows: auto auto 1fr;
+      gap: 12px;
+      padding: 14px;
+      border: 3px solid var(--line);
+      border-radius: 18px;
+      background: var(--card);
+      box-shadow: 0 7px 0 rgba(32, 40, 40, 0.09);
+    }
+
+    .stage.one { --stage: var(--blue); }
+    .stage.two { --stage: var(--teal); }
+    .stage.three { --stage: var(--gold); }
+    .stage.four { --stage: var(--purple); }
+    .stage.five { --stage: var(--green); }
+
+    .stage-number {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border: 3px solid var(--line);
+      border-radius: 50%;
+      background: var(--stage);
+      color: #fff;
+      font-weight: 900;
+      box-shadow: 0 4px 0 rgba(32, 40, 40, 0.14);
+    }
+
+    .icon {
+      width: 100%;
+      aspect-ratio: 1.35;
+      display: grid;
+      place-items: center;
+      border: 3px solid var(--line);
+      border-radius: 16px;
+      background: color-mix(in srgb, var(--stage) 12%, #ffffff);
+    }
+
+    .icon svg {
+      width: min(76%, 150px);
+      height: auto;
+      overflow: visible;
+    }
+
+    .stage h2 {
+      margin: 0;
+      color: var(--stage);
+      font-size: 1.08rem;
+      line-height: 1.12;
+    }
+
+    .stage ul {
+      display: grid;
+      gap: 8px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .stage li {
+      position: relative;
+      padding-left: 18px;
+    }
+
+    .stage li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.48em;
+      width: 8px;
+      height: 8px;
+      border: 2px solid var(--line);
+      border-radius: 50%;
+      background: var(--stage);
+    }
+
+    .checkpoint-row {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      padding: 0 26px 20px;
+    }
+
+    .stamp {
+      min-height: 54px;
+      display: grid;
+      place-items: center;
+      padding: 8px;
+      border: 3px solid currentColor;
+      border-radius: 12px;
+      background: #fff;
+      color: var(--ink);
+      font-size: 0.78rem;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    .stamp.blue { color: var(--blue); }
+    .stamp.teal { color: var(--teal); }
+    .stamp.gold { color: var(--gold); }
+    .stamp.purple { color: var(--purple); }
+    .stamp.green { color: var(--green); }
+
+    .stop-panel {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 16px;
+      align-items: center;
+      margin: 0 26px 22px;
+      padding: 16px;
+      border: 3px solid var(--line);
+      border-radius: 18px;
+      background: #fff4f1;
+    }
+
+    .stop-sign {
+      width: 86px;
+      height: 86px;
+      display: grid;
+      place-items: center;
+      border: 4px solid var(--line);
+      clip-path: polygon(30% 0, 70% 0, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0 70%, 0 30%);
+      background: var(--coral);
+      color: #fff;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+    }
+
+    .stop-panel h2 {
+      margin: 0 0 4px;
+      font-size: 1.12rem;
+    }
+
+    .stop-panel p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .never-row {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 10px;
+      padding: 18px 26px 24px;
+      border-top: 3px solid var(--line);
+      background: #f0f5f4;
+    }
+
+    .never-card {
+      padding: 12px;
+      border: 2px solid var(--line);
+      border-radius: 14px;
+      background: #fff;
+      font-size: 0.86rem;
+      color: var(--muted);
+    }
+
+    .never-card strong {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--ink);
+    }
+
+    @media (max-width: 980px) {
+      .hero { grid-template-columns: 1fr; }
+      .hero-badge { width: 128px; min-height: 128px; }
+      .flow,
+      .checkpoint-row,
+      .never-row { grid-template-columns: 1fr; }
+      .flow::before { display: none; }
+      .stage { min-height: 0; }
+    }
+
+    @media print {
+      body { background: #fff; }
+      .page { width: 100%; padding: 0; }
+      .topbar { display: none; }
+      .poster {
+        min-height: 100vh;
+        border-radius: 0;
+        box-shadow: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <nav class="topbar" aria-label="Site navigation">
+      <a class="brand" href="../index.html">Global Active</a>
+      <div class="nav">
+        <a href="../key-person-risk-brief/index.html">Key-Person Risk Brief</a>
+        <a href="../cv/index.html">CV</a>
+        <a href="https://github.com/robertmckean" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/robert-mckean-ai/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:robert@globalactive.ai">robert@globalactive.ai</a>
+      </div>
+    </nav>
+
+    <article class="poster" aria-label="Data security and custody flow">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">Global Active Key-Person Risk Brief</p>
+          <h1>How Your Data Moves Through the Engagement</h1>
+          <p class="subtitle">
+            A temporary, single-client workflow using approved records, encrypted handling,
+            SSH-managed isolated cloud infrastructure, authenticated edge access, a dedicated
+            workspace for named users, source-cited deliverables, and written deletion confirmation.
+          </p>
+        </div>
+        <div class="hero-badge" aria-label="Single client temporary workflow">
+          <div><span>1</span>client<br>at a time</div>
+        </div>
+      </header>
+
+      <section class="flow" aria-label="Five-stage data flow">
+        <section class="stage one">
+          <div class="stage-number">1</div>
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 180 130" role="img">
+              <rect x="24" y="32" width="82" height="58" rx="8" fill="#ffffff" stroke="#202828" stroke-width="6"/>
+              <rect x="38" y="45" width="54" height="8" rx="4" fill="#2f74b7"/>
+              <rect x="38" y="61" width="40" height="8" rx="4" fill="#d8d5cc"/>
+              <path d="M115 68h28v37H74V68h24" fill="#f4c466" stroke="#202828" stroke-width="6" stroke-linejoin="round"/>
+              <path d="M91 68V55c0-15 11-25 25-25s25 10 25 25v13" fill="none" stroke="#202828" stroke-width="8" stroke-linecap="round"/>
+              <circle cx="116" cy="86" r="7" fill="#202828"/>
+            </svg>
+          </div>
+          <div>
+            <h2>Scope and authority</h2>
+            <ul>
+              <li>Client signs data authority before records move.</li>
+              <li>Custodians, systems, date range, and file types are approved in writing.</li>
+              <li>Client terms define legal, HR, medical, privileged, and regulated categories.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="stage two">
+          <div class="stage-number">2</div>
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 180 130" role="img">
+              <path d="M34 93h88c19 0 32-12 32-29 0-16-12-28-29-28-6 0-12 2-17 5-9-17-28-26-47-18-16 7-25 21-25 38-15 2-25 13-25 28 0 3 1 6 2 9 5 10 14 15 21 15z" fill="#dff7f3" stroke="#202828" stroke-width="6" stroke-linejoin="round"/>
+              <rect x="65" y="58" width="58" height="42" rx="7" fill="#ffffff" stroke="#202828" stroke-width="6"/>
+              <path d="M76 58V45c0-11 8-19 18-19s18 8 18 19v13" fill="none" stroke="#202828" stroke-width="7" stroke-linecap="round"/>
+              <path d="M42 105h95" stroke="#1e9188" stroke-width="8" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <h2>Client-controlled transfer</h2>
+            <ul>
+              <li>Client IT provides the secure transfer site or approved channel.</li>
+              <li>Archive is encrypted before upload; passphrase is sent separately.</li>
+              <li>SHA-256 hash is verified and a receipt manifest is created.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="stage three">
+          <div class="stage-number">3</div>
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 180 130" role="img">
+              <rect x="26" y="38" width="128" height="68" rx="12" fill="#fff6dc" stroke="#202828" stroke-width="6"/>
+              <path d="M45 70h90" stroke="#202828" stroke-width="6" stroke-linecap="round"/>
+              <path d="M55 50h20M87 50h38M55 91h28M96 91h30" stroke="#d8942d" stroke-width="8" stroke-linecap="round"/>
+              <path d="M70 70c6-18 34-18 40 0" fill="none" stroke="#202828" stroke-width="6" stroke-linecap="round"/>
+              <path d="M82 70V58c0-8 6-14 14-14s14 6 14 14v12" fill="none" stroke="#202828" stroke-width="6" stroke-linecap="round"/>
+              <circle cx="96" cy="82" r="7" fill="#202828"/>
+            </svg>
+          </div>
+          <div>
+            <h2>Encrypted workbench</h2>
+            <ul>
+              <li>Records are downloaded directly into an encrypted engagement vault.</li>
+              <li>Malware scan and sensitive-material screen run before analysis.</li>
+              <li>Ingest, extraction, normalization, and indexing stay inside the engagement workspace.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="stage four">
+          <div class="stage-number">4</div>
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 180 130" role="img">
+              <rect x="24" y="27" width="86" height="68" rx="10" fill="#ffffff" stroke="#202828" stroke-width="6"/>
+              <path d="M41 46h50M41 63h38M41 80h45" stroke="#7662b8" stroke-width="7" stroke-linecap="round"/>
+              <circle cx="118" cy="76" r="28" fill="#eee8ff" stroke="#202828" stroke-width="6"/>
+              <path d="M138 96l22 22" stroke="#202828" stroke-width="9" stroke-linecap="round"/>
+              <path d="M106 75l9 10 17-22" fill="none" stroke="#2d7a55" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div>
+            <h2>Verified analysis</h2>
+            <ul>
+              <li>AI-augmented retrieval runs on Anthropic's Claude, grounded only in approved records, with model training excluded.</li>
+              <li>Claims, quotes, and citations are checked against source material.</li>
+              <li>Human review happens before any client deliverable is released.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="stage five">
+          <div class="stage-number">5</div>
+          <div class="icon" aria-hidden="true">
+            <svg viewBox="0 0 180 130" role="img">
+              <rect x="31" y="28" width="118" height="70" rx="11" fill="#eef9f2" stroke="#202828" stroke-width="6"/>
+              <path d="M53 108h74" stroke="#202828" stroke-width="7" stroke-linecap="round"/>
+              <path d="M90 98v10" stroke="#202828" stroke-width="7" stroke-linecap="round"/>
+              <circle cx="90" cy="62" r="22" fill="#ffffff" stroke="#202828" stroke-width="6"/>
+              <path d="M78 63l9 9 18-23" fill="none" stroke="#2d7a55" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M136 27l19-16M145 52l25-2M132 77l18 17" stroke="#d8942d" stroke-width="6" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <div>
+            <h2>Protected workspace</h2>
+            <ul>
+              <li>Temporary single-client DigitalOcean workspace, protected by Cloudflare Access.</li>
+              <li>Named users get authenticated access for follow-up questions.</li>
+              <li>Hosted access is removed and workspace materials are deleted at closeout.</li>
+            </ul>
+          </div>
+        </section>
+      </section>
+
+      <section class="checkpoint-row" aria-label="Control checkpoints">
+        <div class="stamp blue">Authority checked</div>
+        <div class="stamp teal">Hash verified</div>
+        <div class="stamp gold">Vault only</div>
+        <div class="stamp purple">Citations reviewed</div>
+        <div class="stamp green">Deletion confirmed</div>
+      </section>
+
+      <section class="stop-panel" aria-label="Sensitive material stop gate">
+        <div class="stop-sign">STOP</div>
+        <div>
+          <h2>Unexpected sensitive material stops the workflow.</h2>
+          <p>
+            If screening surfaces legal, HR, medical, privileged, investigation, regulated, or other
+            sensitive material outside the agreed scope, processing pauses until your team gives written direction.
+          </p>
+        </div>
+      </section>
+
+      <section class="never-row" aria-label="Data handling guardrails">
+        <div class="never-card"><strong>Handled inside the engagement</strong> Upload steps, access, and records are arranged privately within the engagement, not on this public site.</div>
+        <div class="never-card"><strong>Records stay in the vault</strong> Client records, secrets, and engagement data live only in the encrypted vault, kept out of code, repositories, and screenshots.</div>
+        <div class="never-card"><strong>AI processing, training off</strong> Record text is analyzed by Anthropic's Claude under commercial API terms that exclude model training. Your data is never used to train AI models.</div>
+        <div class="never-card"><strong>Time-boxed, named access</strong> Workspace access is temporary, authenticated, and limited to named users.</div>
+        <div class="never-card"><strong>Deletion confirmed in writing</strong> After hosted access and workspace materials are removed, your team receives written confirmation.</div>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

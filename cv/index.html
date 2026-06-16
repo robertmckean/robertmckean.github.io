@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Robert McKean CV: executive technical advisor, fractional CTO, engineering execution, AI architecture, and production-readiness leadership.">
+  <title>Robert McKean CV | Global Active</title>
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f8f7f3;
+      --ink: #1f2424;
+      --muted: #68706f;
+      --line: #d8d5cc;
+      --link: #245f7a;
+      --accent: #2a5f4a;
+      --card: #fdfcf8;
+      --max: 980px;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      color: var(--ink);
+      background: var(--bg);
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.45;
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+    }
+
+    a:hover,
+    a:focus {
+      text-decoration: underline;
+    }
+
+    .page {
+      width: min(100% - 48px, var(--max));
+      margin: 0 auto;
+      padding: 24px 0 28px;
+    }
+
+    header {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 28px;
+      align-items: start;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin: 0;
+    }
+
+    h1 {
+      font-family: "Inter", Arial, Helvetica, sans-serif;
+      font-size: clamp(2rem, 3.2vw, 3.1rem);
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      line-height: 1.04;
+    }
+
+    .subtitle {
+      max-width: 760px;
+      margin-top: 8px;
+      color: var(--muted);
+      font-size: 1.02rem;
+    }
+
+    nav {
+      display: grid;
+      gap: 4px;
+      min-width: 190px;
+      padding-top: 6px;
+      color: var(--muted);
+      font-size: 0.94rem;
+      text-align: right;
+    }
+
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .topbar .brand { color: var(--ink); font-weight: 700; }
+
+    .topbar .nav {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .section-label {
+      margin: 24px 0 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid var(--line);
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .summary {
+      margin-top: 18px;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-left: 4px solid var(--accent);
+      background: var(--card);
+    }
+
+    .summary p {
+      max-width: 820px;
+      color: var(--ink);
+      font-size: 1rem;
+      line-height: 1.55;
+    }
+
+    .summary p + p {
+      margin-top: 8px;
+    }
+
+    .capabilities {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .capability,
+    .role,
+    .education {
+      padding: 15px;
+      border: 1px solid var(--line);
+      background: var(--card);
+    }
+
+    .capability h3,
+    .role h3,
+    .education h3 {
+      font-size: 1rem;
+      line-height: 1.25;
+    }
+
+    .role .meta,
+    .education .meta {
+      margin-top: 3px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    ul {
+      margin: 9px 0 0;
+      padding-left: 19px;
+    }
+
+    li {
+      margin-top: 5px;
+      color: var(--ink);
+      font-size: 0.95rem;
+    }
+
+    .roles {
+      display: grid;
+      gap: 12px;
+    }
+
+    .site-footer {
+      margin-top: 26px;
+      padding-top: 14px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 760px) {
+      .page {
+        width: min(100% - 28px, var(--max));
+        padding-top: 18px;
+      }
+
+      header {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        text-align: left;
+      }
+
+      .capabilities {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="topbar" role="navigation" aria-label="Site links">
+      <a class="brand" href="../index.html">Global Active</a>
+      <div class="nav">
+        <a href="../key-person-risk-brief/index.html">Key-Person Risk Brief</a>
+        <a href="https://github.com/robertmckean" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/robert-mckean-ai/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:robert@globalactive.ai">robert@globalactive.ai</a>
+      </div>
+    </div>
+    <header>
+      <div>
+        <h1>Robert McKean</h1>
+        <p class="subtitle">Executive Technical Advisor | Fractional CTO | Engineering Execution &amp; AI Architecture</p>
+      </div>
+    </header>
+
+    <section class="summary" aria-label="Profile">
+      <p>Executive technical authority with production accountability across global engineering organizations. Advises executive teams on engineering execution risk, AI feasibility, and architectural integrity prior to scale.</p>
+      <p>Leads defined-scope AI and systems initiatives from strategic assessment through validated implementation, restoring architectural discipline, measurable outcomes, and production reliability.</p>
+    </section>
+
+    <h2 class="section-label">Technical and Leadership Capabilities</h2>
+    <section class="capabilities" aria-label="Technical and leadership capabilities">
+      <article class="capability">
+        <h3>Executive Engineering Leadership</h3>
+        <ul>
+          <li>Governance and stop-ship authority</li>
+          <li>Global program execution</li>
+          <li>Capital allocation and risk mitigation</li>
+          <li>Cross-functional reorgs and operating-model change</li>
+        </ul>
+      </article>
+      <article class="capability">
+        <h3>AI &amp; Machine Learning Architecture</h3>
+        <ul>
+          <li>PyTorch, TensorFlow, CUDA</li>
+          <li>Data Science engineering and AI model architecture</li>
+          <li>Training pipeline design and AI feasibility evaluation</li>
+        </ul>
+      </article>
+      <article class="capability">
+        <h3>Systems &amp; Software Architecture</h3>
+        <ul>
+          <li>Python, C/C++, Windows desktop systems</li>
+          <li>PyQt and secure file architectures</li>
+          <li>Automated validation frameworks</li>
+        </ul>
+      </article>
+    </section>
+
+    <h2 class="section-label">Professional Experience</h2>
+    <section class="roles" aria-label="Professional experience">
+      <article class="role">
+        <h3>Independent Executive Technical Advisor</h3>
+        <p class="meta">07/2025 - Present</p>
+        <ul>
+          <li>Advise executive leaders on AI feasibility, system architecture, and execution risk.</li>
+          <li>Perform structured technical assessments and define implementation paths prior to scale.</li>
+          <li>Identify data, model, risks, and organizational constraints impacting production viability.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <h3>Founder &amp; Principal Architect, Global Active - Key-Person Risk Brief</h3>
+        <p class="meta">01/2026 - Present</p>
+        <ul>
+          <li>Key-Person Risk Brief is a source-grounded knowledge-recovery system that turns a key person&#x27;s email, LLM histories, attachments, and related work records into verifiable executive briefs and queryable evidence.</li>
+          <li>Engineered the verification workflow: claims trace to source records, quotations are checked against originals, invalid citations block delivery, and coverage review surfaces gaps a fluent answer can hide.</li>
+          <li>Solely designed and built the end-to-end engine, internally BrainDump: intake, supported attachment extraction, atomization, retrieval, citation checking, coverage review, and hosted query workspace.</li>
+          <li>Productized the system as a secure, single-client workflow with authenticated hosted workspaces, encrypted per-engagement processing, app-side rate limits, provider spend caps, sensitive-material screening, and deletion closeout.</li>
+          <li>Validated the workflow end to end on synthetic corpora and a <a href="https://syntheticorp.braindump.vip/" target="_blank" rel="noopener noreferrer">public live demonstration</a>.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <h3>Independent Systems Architect &amp; Developer - Secure File Portal System (Windows)</h3>
+        <p class="meta">11/2024 - 06/2025</p>
+        <ul>
+          <li>Architected secure file isolation eliminating user-facing encryption complexity without administrative privileges.</li>
+          <li>Designed enterprise-grade file transfer architecture ensuring verifiable, lossless delivery under real-world Windows conditions.</li>
+          <li>Established failure-mode testing and iterative hardening to prevent corruption, partial transfers, and data loss.</li>
+          <li>Directed AI-assisted implementation under strict architectural control and regression validation.</li>
+          <li>Implemented 300+ automated validation tests enforcing deterministic system behavior.</li>
+          <li>Delivered full Windows desktop application with tray interface and drag-and-drop workflow.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <h3>Microsoft Corporation - Technical Project Manager 4 (Contract through Zensa LLC)</h3>
+        <p class="meta">01/2022 - 11/2024</p>
+        <ul>
+          <li>Held end-to-end system accountability for RGB and IR camera platforms for Microsoft Surface devices.</li>
+          <li>Directed cross-functional execution across hardware, firmware, optics, software, and global manufacturing.</li>
+          <li>Owned production readiness governance, leading executive design reviews and structured risk mitigation prior to shipment.</li>
+          <li>Resolved cross-discipline integration conflicts impacting production release.</li>
+          <li>Delivered multiple camera platforms to production on schedule and within budget across US, China, South Korea, and Finland engineering programs.</li>
+          <li>Defined biometric and sensor roadmap influencing next-generation Surface products.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <h3>Independent AI Research and Development - drums2midi (Drum Audio-to-MIDI System)</h3>
+        <p class="meta">05/2023 - 01/2024 &middot; <a href="https://github.com/robertmckean/drums2midi" target="_blank" rel="noopener noreferrer">github.com/robertmckean/drums2midi</a></p>
+        <ul>
+          <li>Executed the full machine learning lifecycle from problem definition through dataset engineering, model architecture, training, and evaluation for a drum audio-to-MIDI system.</li>
+          <li>Achieved sub-3ms timing resolution from raw audio to structured MIDI.</li>
+          <li>Designed and curated 9.5 hours of time-aligned audio/MIDI training data; built a custom K-means pipeline for scalable drum sample classification.</li>
+          <li>Architected an end-to-end audio learning pipeline in Python (PyTorch + nnAudio) with trainable STFT front end.</li>
+          <li>Designed and trained a custom 1D convolutional encoder-decoder for multi-class drum event detection and velocity prediction.</li>
+          <li>Engineered model and data pipeline architecture under RTX 3080 (&lt;8GB VRAM) constraints, balancing depth, batch size, and memory efficiency.</li>
+          <li>Built a complete technical artifact including training workflow and a public GitHub repository documenting system architecture, constraints, and results.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <h3>HARMAN Professional Solutions - Sr. Director, Test &amp; Validation</h3>
+        <p class="meta">10/2016 - 10/2020</p>
+        <ul>
+          <li>Served as sole global decision authority for product safety and regulatory compliance (EMC, electrical safety, certifications) across $1B HARMAN Professional division.</li>
+          <li>Held full stop-ship authority for all HARMAN Professional products.</li>
+          <li>Led 62-engineer multinational validation organization ensuring production readiness across global markets.</li>
+          <li>Directed $3M capital expansion equipping engineering organization with advanced instrumentation supporting 80+ new hires in a single fiscal year.</li>
+          <li>Directed construction and outfitting of $3M advanced test lab including EMC and acoustic chambers.</li>
+          <li>Designed and implemented engineering hiring system restoring operational control and enabling recruitment of 120 engineers in two years.</li>
+          <li>Served as global technical authority in Shenzhen for cross-functional execution and factory integration.</li>
+          <li>Designed automated validation frameworks detecting failures prior to customer exposure.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <h3>TP-LINK Technology Corporation - Director, Business Unit - Acoustics</h3>
+        <p class="meta">11/2014 - 11/2015</p>
+        <ul>
+          <li>Led connected audio product development from concept through production.</li>
+          <li>Worked directly with Qualcomm and Tencent on Wi-Fi speaker platform strategy.</li>
+          <li>Delivered company&#x27;s first Bluetooth speaker product.</li>
+          <li>Directed integration of Wi-Fi, Bluetooth, DSP tuning, and cloud streaming systems.</li>
+          <li>Resolved factory-level technical and production challenges.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <h3>MUSIC Tribe (MUSIC Group/Behringer) - Vice President, R&amp;D, China</h3>
+        <p class="meta">02/2013 - 11/2014</p>
+        <ul>
+          <li>Directed global R&amp;D organization of 200+ engineers across multiple disciplines.</li>
+          <li>Increased release velocity 40% while reducing field failure rates from above 10% to below 2%.</li>
+          <li>Implemented Agile PLM as enterprise-wide development backbone.</li>
+          <li>Improved yield and manufacturing integration through direct factory engagement.</li>
+          <li>Held decision authority for global product shipment releases.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <h3>LINE 6 (Yamaha Guitar Group) - Vice President, Engineering</h3>
+        <p class="meta">2006 - 2012</p>
+        <ul>
+          <li>Led 60-person engineering organization spanning hardware, DSP, embedded, and software disciplines.</li>
+          <li>Defined product roadmap supporting sustained revenue growth and strong margins.</li>
+          <li>Improved gross margins above 45% through architectural and cost discipline.</li>
+          <li>Built Shenzhen engineering team reducing development cost and accelerating NPI cycles.</li>
+          <li>Implemented Agile execution methods for hardware improving predictability and delivery.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <h3>360 Systems - Vice President, Engineering</h3>
+        <p class="meta">2001 - 2006</p>
+        <ul>
+          <li>Led engineering for mission-critical broadcast video hardware and software platforms.</li>
+          <li>Co-developed ImageServer video server adopted by major broadcast networks.</li>
+          <li>Increased company revenue from $3M to $12M during tenure.</li>
+          <li>Directed Linux- and Windows-based platform development for broadcast applications.</li>
+          <li>Worked directly with senior network broadcast executives to develop key feature sets.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <h3>ALESIS - Vice President, Engineering</h3>
+        <p class="meta">1996 - 2001</p>
+        <ul>
+          <li>Led engineering development of innovative professional audio hardware and software platforms.</li>
+          <li>Directed multidisciplinary teams delivering industry-defining professional audio products.</li>
+          <li>Identified and introduced strategic buyer inMusic, resulting in continuation of the Alesis brand.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <h3>SABRE/Travelocity - Software Engineer</h3>
+        <p class="meta">1996</p>
+        <ul>
+          <li>Architected Travelocity&#x27;s first C/C++ homepage backend following the Sabre IPO.</li>
+          <li>Owned production stability under live consumer load, with zero tolerance for memory leaks or runtime failure.</li>
+        </ul>
+      </article>
+    </section>
+
+    <h2 class="section-label">Education &amp; Certifications</h2>
+    <section class="education" aria-label="Education and certifications">
+      <h3>Bachelor of Science, Electrical Engineering</h3>
+      <p class="meta">California State University, Long Beach</p>
+      <ul>
+        <li>Machine Learning (Andrew Ng)</li>
+        <li>Deep Learning Specialization</li>
+        <li>TensorFlow Developer Professional Certificate</li>
+        <li>Data Science Specialization</li>
+      </ul>
+    </section>
+
+    <footer class="site-footer">
+      Global Active | Robert McKean
+    </footer>
+  </main>
+</body>
+</html>

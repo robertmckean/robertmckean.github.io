@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Key-Person Risk Brief (sample)</title>
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f8f7f3;--ink:#1f2424;--muted:#68706f;--line:#d8d5cc;--link:#245f7a;--accent:#2a5f4a;--accent-2:#8a5a1f;--card:#fdfcf8;}
+*{box-sizing:border-box;}
+html{-webkit-print-color-adjust:exact;print-color-adjust:exact;}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Inter",Arial,Helvetica,sans-serif;font-size:16px;line-height:1.7;}
+.brief{max-width:780px;margin:0 auto;padding:34px 28px 64px;}
+.topnav{font-size:0.85rem;margin:0 0 22px;}
+.topnav a{color:var(--muted);}
+h1{font-size:2rem;font-weight:800;letter-spacing:-0.02em;line-height:1.15;margin:0 0 4px;}
+.subject{font-size:1.12rem;font-weight:600;color:var(--accent);margin:0 0 20px;}
+.intro{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin:0 0 16px;}
+.intro p{margin:0 0 10px;font-size:0.95rem;line-height:1.62;}
+.intro p:last-child{margin-bottom:0;}
+.scope{background:#edf2ef;border:1px solid var(--line);border-radius:10px;padding:12px 18px;margin:0 0 12px;font-size:0.95rem;}
+.meta-line{font-size:0.88rem;color:var(--muted);margin:2px 0;}
+hr.div{border:0;border-top:1px solid var(--line);margin:32px 0;}
+h2{font-size:1.38rem;font-weight:700;margin:36px 0 12px;padding-bottom:8px;border-bottom:2px solid var(--line);}
+h3{font-size:1.08rem;font-weight:600;margin:24px 0 8px;}
+p{margin:0 0 14px;}
+strong{font-weight:600;}
+a{color:var(--link);}
+ul,ol{margin:0 0 16px;padding-left:22px;}
+li{margin:0 0 8px;line-height:1.6;}
+.cite{display:inline-block;background:#eceae3;color:var(--muted);font-family:"SFMono-Regular",Consolas,monospace;font-size:0.72em;padding:1px 6px;border-radius:5px;white-space:nowrap;vertical-align:1px;}
+.cards{margin:0 0 18px;}
+.item-card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:14px 18px;margin:0 0 12px;}
+.item-title{font-weight:600;font-size:1.02rem;margin:0 0 10px;}
+.item-fields{display:grid;grid-template-columns:max-content 1fr;gap:8px 16px;font-size:0.94rem;line-height:1.55;}
+.field-label{color:var(--muted);font-size:0.78rem;text-transform:uppercase;letter-spacing:0.04em;padding-top:2px;white-space:nowrap;}
+table.ref{width:100%;border-collapse:collapse;margin:0 0 18px;font-size:0.86rem;}
+table.ref th{text-align:left;font-weight:600;color:var(--muted);font-size:0.74rem;text-transform:uppercase;letter-spacing:0.04em;padding:8px 10px;border-bottom:2px solid var(--line);}
+table.ref td{padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.45;}
+table.ref tr:nth-child(even) td{background:rgba(0,0,0,0.025);}
+.docfoot{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);font-size:0.8rem;color:var(--muted);line-height:1.55;}
+@page{margin:16mm 15mm;}
+@media print{
+  body{font-size:10.5pt;line-height:1.5;}
+  .brief{max-width:none;padding:0;}
+  .screen-only{display:none;}
+  h2{break-after:avoid;font-size:14pt;}
+  h3{break-after:avoid;font-size:11.5pt;}
+  .item-card{break-inside:avoid;}
+  table.ref tr{break-inside:avoid;}
+  p,li{orphans:3;widows:3;}
+}
+@media (max-width:560px){
+  .brief{padding:24px 18px 48px;}
+  .item-fields{grid-template-columns:1fr;gap:4px;}
+  .field-label{white-space:normal;}
+  .item-card{overflow-wrap:anywhere;}
+}
+</style>
+</head>
+<body>
+<div class="brief">
+<div class="topnav screen-only"><a href="../key-person-risk-brief/index.html">Back to Key-Person Risk Brief</a> &nbsp;&middot;&nbsp; <a href="key-person-risk-brief-sample.pdf">Download this brief (PDF)</a></div>
+<h1>Key-Person Risk Brief (sample)</h1>
+<p class="subject">Subject: Vince Kaminski, Managing Director, Head of Quantitative Risk Research, Enron Corp</p>
+<div class="intro"><p><strong>What this is.</strong> A real Key-Person Risk Brief, shown exactly as Global Active's engine produced it; only this explanatory header has been added. It was generated, verified, and source-cited through our AI-augmented retrieval workflow. We show the full brief, not a teaser, so you can judge the depth before commissioning one.</p><p><strong>The scenario.</strong> We ran it on a real departure from the public record. Vince Kaminski's actual notice email of January 16, 2002 ("My last day is Jan 31. The group was disbanded on Tue.") set the trigger, and the brief was built only from what was in his mailbox on or before that date, exactly what a continuity team would have had to work with that day.</p><p><strong>Source and limits.</strong> Built from the public EDRM Enron Email Data Set (EDRM.NET), originally released by the U.S. Federal Energy Regulatory Commission. Public historical data, used for demonstration only. Not customer data, not legal advice, and not a present-day assessment of any person or company. A real engagement runs on your approved records, including supported attachment types, and is scoped with your team.</p><p><strong>More than the brief.</strong> This sample is the brief on its own. A commissioned engagement also includes a private, source-linked workspace built with all the records provided by the client, so your team can dig deeper into details or surface information that was not included in the brief.</p></div>
+<div class="scope"><strong>At a glance:</strong> 12 sections, 16 proprietary assets inventoried, roughly 45 people mapped, and a 48-hour action plan. Material findings tie back to 46 distinct source messages, cited 154 times across the brief.</div>
+<p class="meta-line"><strong>Prepared for:</strong> CEO, COO, General Counsel, and continuity leadership</p>
+<p class="meta-line"><strong>Scenario trigger (notice date):</strong> January 16, 2002</p>
+<hr class="div">
+<h2>1. Executive Summary</h2>
+<p>Vince Kaminski, Managing Director and Head of the Enron Research Group (Quantitative Risk Research), gave notice on January 16, 2002, with a last day of January 31 <span class="cite">msg 3.351489</span>. His departure follows the disbanding of the Research Group on approximately January 15 <span class="cite">msg 3.351489</span>. Kaminski managed a team of 40+ quantitative professionals across Houston and London who built and maintained the company's core pricing, VaR, and credit risk models, as well as the "Exotica" options pricing library used across trading desks globally. He is also a material witness in the LJM/Raptor litigation, having formally refused to sign off on valuations produced by his group, and having reported the disappearance of a critical email from the Enron mail system <span class="cite">msg 3.343818</span>. Jim Fallon (CEO of the reorganized EWS) has instructed Kaminski not to transfer software until a formal letter is issued <span class="cite">msg 3.351489</span>. This creates a narrow window in which software, model documentation, team retention, academic relationships, and litigation-related evidence must all be secured.</p>
+<p>Separately, the Research Group was conducting a study of power and gas trading profitability using ORACLE risk management databases and EnronOnline data that found figures "substantially at variance" with commonly believed numbers <span class="cite">msg 3.351665</span>. This work product, authored by Rakesh Bharati under Kaminski's supervision, has direct reporting-integrity implications and must be preserved and handed off to the appropriate investigative or accounting body.</p>
+<p><strong>The three most urgent risks are:</strong></p>
+<ol><li>Loss of control over proprietary quantitative software and models, including "Exotica," VaR/Reliability VaR, HJM simulation code, the P Plus pricing model, and the ModReg/SDDP framework, without a documented handoff or even a complete inventory.</li><li>Flight risk of the entire Research Group staff, now without a manager, sponsor, or organizational home.</li><li>Loss of Kaminski as a cooperative litigation witness and custodian of evidence he has independently preserved on personal systems.</li></ol>
+<hr class="div">
+<h2>2. Trigger Event</h2>
+<p>On January 16, 2002, Kaminski emailed a contact ("Berney") stating: his last day would be January 31, the Research Group had been disbanded the preceding Tuesday (approx. Jan 15), and Jim Fallon had instructed him to halt software transfer pending a formal letter <span class="cite">msg 3.351489</span>.</p>
+<p>This follows the January 9 EWS reorganization announcement naming Fallon as CEO, with Dave Gorte heading RAC and a new reporting structure that does not appear to include a research/quant function <span class="cite">msg 3.338969</span>. The disbanding of the Research Group appears to have been an organizational decision by the post-bankruptcy EWS leadership.</p>
+<hr class="div">
+<h2>3. Immediate Continuity Risks</h2>
+<h3>3a. Quantitative Software and Models</h3>
+<p><strong>Exotica Options Library.</strong> This is an Excel add-in (.xll) containing exotic option pricing routines used by trading desks in Houston and London. Multiple versions exist across offices; synchronization was an identified problem. The Houston version was the reference implementation, and London's research team had planned but deprioritized a C++ rewrite <span class="cite">msg 3.332052</span>. Without Kaminski and the Research Group, there is no identified owner of this codebase. Exotica is embedded in daily P&amp;L calculations; version discrepancies could produce material valuation differences amplified by trade volume <span class="cite">msg 3.332052</span>.</p>
+<p><strong>VaR Models.</strong> The Research Group maintained and developed the production Monte Carlo VaR system, a proposed "Reliability VaR" method (under external review by Prof. Duffie at Stanford), and was involved in evaluating a "Convolution VaR" alternative proposed by RAC [msg 3.340608, msg 3.352158]. The factor-loading methodology (expanding from 7 to approximately 60 factors) was a joint initiative between Research, RAC, and IT, and was in progress at the time of Kaminski's notice <span class="cite">msg 3.340608</span>. Loss of the research team may stall this work.</p>
+<p><strong>Credit Risk Models.</strong> Kaminski's group developed public-firm and private-firm default models for Enron Credit. A comparative study of these models was being prepared for external review by Prof. Darrell Duffie at Stanford [msg 3.351954, msg 3.349859]. Outstanding deliverables included revisions to documentation that Duffie found insufficient for practical implementation <span class="cite">msg 3.355509</span>.</p>
+<p><strong>HJM Simulation Model.</strong> Paulo Issler developed a Heath-Jarrow-Morton interest-rate simulation model for option pricing, coded in C, and stored on the Research Group shared drive at o:\research\common\project\options\HJM. The model generates daily spot price grids and transition probabilities and uses forward-forward volatilities with per-month factor loadings. The full source code (HJMsim.c, HJM.c, support.c, and Numerical Recipes files) is self-contained in that directory <span class="cite">msg 3.340532</span>. This model has no identified maintainer post-disbanding and could be lost if the shared drive is decommissioned or access is revoked.</p>
+<p><strong>P Plus Pricing Model.</strong> A spread-option pricing model with documentation was developed by Stinson Gibner and forwarded by Zimin Lu to Kaminski in June 2001. The documentation was described as an early draft requiring revision <span class="cite">msg 3.356198</span>. This model is not part of the Exotica library and must be inventoried separately.</p>
+<p><strong>ModReg / SDDP for Argentina.</strong> A regulatory/pricing model ("ModReg") for the Argentine power market was being calibrated by Research Group staff including Tom Halliburton, Jorge Gumucio, and international collaborators. Halliburton noted his last day at Enron was November 2, 2001, and the task of setting up SDDP for Argentina was left with limited handoff <span class="cite">msg 3.338726</span>. The status of this model and its data is unclear; Kaminski was involved in the review meeting.</p>
+<h3>3b. Software Transfer Freeze</h3>
+<p>Fallon's instruction to Kaminski to do nothing pending a formal letter creates a period of ambiguity about who controls the software. If Kaminski departs on January 31 without a documented transfer, the company risks losing institutional knowledge about what code exists, where it resides, and how to maintain it. The formal letter from Fallon must be issued and acted upon well before the departure date.</p>
+<h3>3c. Shared Drive and Document Repository Risk</h3>
+<p>The Research Group maintained a Livelink document repository with a controlled user access list managed by Shirley Crenshaw. An October 2001 "Add User" template lists over 40 individuals with access <span class="cite">msg 3.349918</span>. Without action, access permissions may become orphaned or the repository decommissioned, resulting in loss of stored model documentation, project files, and analytical outputs. Separately, the o:\research\common shared drive contains source code (including the HJM model) and custom function libraries referenced by research staff <span class="cite">msg 3.340532</span>. Both storage systems require immediate preservation.</p>
+<h3>3d. Team Retention</h3>
+<p>A December 12, 2001 distribution list for the Research Group identifies approximately 45 named members across Houston (majority) and London <span class="cite">msg 3.351673</span>. Key technical staff include:</p>
+<ul><li>Vasant Shanbhogue (senior researcher, credit models, LJM valuation work)</li><li>Tanya Tamarchenko (VaR methodology, Reliability VaR, Convolution VaR evaluation)</li><li>Zimin Lu (Exotica library, P Plus model, conference speaker, bid-offer spread research)</li><li>Rakesh Bharati (LJM/Raptor valuation memo author, power/gas profitability study)</li><li>Rabi De (Reliability VaR documentation for Duffie)</li><li>Mike Roberts / Steve Bennett (weather derivatives team)</li><li>Stinson Gibner (deputy, P Plus model documentation, considered for London assignment)</li><li>Nelson Neale (forward curves: JCC, ethanol)</li><li>Chonawee Supatgiat (bid-ask pricing, Broadband content markets)</li><li>Pinnamaneni Krishnarao (credit risk, co-author with Kaminski)</li><li>Iris Mack (credit model liaison with London)</li><li>Paulo Issler (HJM simulation model)</li><li>Amitava Dhar (credit projects, macroeconomic factor analysis)</li><li>Mauricio Mora (economic time-series analysis, credit projects)</li><li>Shirley Crenshaw / Anita DuPont (administrative coordinators, Livelink access management)</li></ul>
+<p>With the group disbanded and Kaminski departing, these individuals have no organizational home. Each one who leaves takes undocumented model knowledge with them.</p>
+<h3>3e. Knowledge-Capture Initiative at Risk</h3>
+<p>In December 2001, a "Research Group Teamwork" initiative was circulated to the entire group <span class="cite">msg 3.331799</span>. This appears to have been an effort to capture and document the group's working dynamics and institutional knowledge. Its output, if any, would be directly valuable for continuity. The status and any deliverables of this initiative must be determined immediately.</p>
+<hr class="div">
+<h2>4. Knowledge and Asset Handoff</h2>
+<h3>4a. Critical IP Assets Requiring Inventory and Transfer</h3>
+<div class="cards">
+<div class="item-card">
+<p class="item-title">Exotica Options Library (.xll)</p>
+<div class="item-fields">
+<span class="field-label">Key Personnel</span><span>Zimin Lu (Houston), Viacheslav Danilov (London)</span>
+<span class="field-label">Status at Notice</span><span>Multiple versions; Houston is reference <span class="cite">msg 3.332052</span></span>
+</div></div>
+<div class="item-card">
+<p class="item-title">VaR Production System (Monte Carlo)</p>
+<div class="item-fields">
+<span class="field-label">Key Personnel</span><span>Tanya Tamarchenko, Naveen Andrews (RAC)</span>
+<span class="field-label">Status at Notice</span><span>Factor expansion to 60 underway <span class="cite">msg 3.340608</span></span>
+</div></div>
+<div class="item-card">
+<p class="item-title">Reliability VaR Method</p>
+<div class="item-fields">
+<span class="field-label">Key Personnel</span><span>Tanya Tamarchenko, Rabi De</span>
+<span class="field-label">Status at Notice</span><span>Under Duffie review; documentation incomplete <span class="cite">msg 3.355509</span></span>
+</div></div>
+<div class="item-card">
+<p class="item-title">Enron Credit Models (public/private firm)</p>
+<div class="item-fields">
+<span class="field-label">Key Personnel</span><span>Iris Mack, Markus Fiala, Scott Salmon (London)</span>
+<span class="field-label">Status at Notice</span><span>Duffie comparative study papers in draft <span class="cite">msg 3.351954</span></span>
+</div></div>
+<div class="item-card">
+<p class="item-title">HJM Interest-Rate Simulation (C code)</p>
+<div class="item-fields">
+<span class="field-label">Key Personnel</span><span>Paulo Issler</span>
+<span class="field-label">Status at Notice</span><span>Source on o:\research\common; self-contained <span class="cite">msg 3.340532</span></span>
+</div></div>
+<div class="item-card">
+<p class="item-title">P Plus Pricing Model (spread options)</p>
+<div class="item-fields">
+<span class="field-label">Key Personnel</span><span>Stinson Gibner, Zimin Lu</span>
+<span class="field-label">Status at Notice</span><span>Early draft documentation; needs revision <span class="cite">msg 3.356198</span></span>
+</div></div>
+<div class="item-card">
+<p class="item-title">ModReg / SDDP for Argentina</p>
+<div class="item-fields">
+<span class="field-label">Key Personnel</span><span>Tom Halliburton (departed Nov 2001), Jorge Gumucio</span>
+<span class="field-label">Status at Notice</span><span>Halliburton departed; setup incomplete <span class="cite">msg 3.338726</span></span>
+</div></div>
+<div class="item-card">
+<p class="item-title">Weather Forecasting Models</p>
+<div class="item-fields">
+<span class="field-label">Key Personnel</span><span>Mike Roberts, Steve Bennett, Tony Hamilton (London)</span>
+<span class="field-label">Status at Notice</span><span>Operational; London staffing was thin <span class="cite">msg 3.340706</span></span>
+</div></div>
+<div class="item-card">
+<p class="item-title">JCC Forward Curve / Ethanol Curve</p>
+<div class="item-fields">
+<span class="field-label">Key Personnel</span><span>Nelson Neale</span>
+<span class="field-label">Status at Notice</span><span>Models in use; historical data dependency <span class="cite">msg 3.332707</span></span>
+</div></div>
+<div class="item-card">
+<p class="item-title">Bid-Offer Spread Research</p>
+<div class="item-fields">
+<span class="field-label">Key Personnel</span><span>Zimin Lu, Bob Lee</span>
+<span class="field-label">Status at Notice</span><span>Literature review and model prototyping <span class="cite">msg 3.356065</span></span>
+</div></div>
+<div class="item-card">
+<p class="item-title">Broadband Content Pricing (movie market)</p>
+<div class="item-fields">
+<span class="field-label">Key Personnel</span><span>Chonawee Supatgiat</span>
+<span class="field-label">Status at Notice</span><span>Novel framework; unclear if still active post-bankruptcy <span class="cite">msg 3.343911</span></span>
+</div></div>
+<div class="item-card">
+<p class="item-title">LJM/Raptor Valuation Memo</p>
+<div class="item-fields">
+<span class="field-label">Key Personnel</span><span>Rakesh Bharati, Vasant Shanbhogue</span>
+<span class="field-label">Status at Notice</span><span>Delivered to Andersen; Kaminski withheld sign-off <span class="cite">msg 3.343794</span></span>
+</div></div>
+<div class="item-card">
+<p class="item-title">Power/Gas Profitability Corroboration Study</p>
+<div class="item-fields">
+<span class="field-label">Key Personnel</span><span>Rakesh Bharati, Jayshree Desai</span>
+<span class="field-label">Status at Notice</span><span>Findings at material variance with believed figures; spreadsheets delivered to Sarah Taylor <span class="cite">msg 3.351665</span></span>
+</div></div>
+<div class="item-card">
+<p class="item-title">Enron Credit Projects (macro factor, recovery rate, EES private firm, ratings downgrade)</p>
+<div class="item-fields">
+<span class="field-label">Key Personnel</span><span>Amitava Dhar, Mauricio Mora, Kenneth Deng</span>
+<span class="field-label">Status at Notice</span><span>Multiple workstreams in progress as of Oct 2001 <span class="cite">msg 3.338733</span></span>
+</div></div>
+<div class="item-card">
+<p class="item-title">Livelink Document Repository</p>
+<div class="item-fields">
+<span class="field-label">Key Personnel</span><span>Shirley Crenshaw (access admin)</span>
+<span class="field-label">Status at Notice</span><span>40+ users; access list requires preservation <span class="cite">msg 3.349918</span></span>
+</div></div>
+<div class="item-card">
+<p class="item-title">Research Group Teamwork documentation</p>
+<div class="item-fields">
+<span class="field-label">Key Personnel</span><span>Entire group</span>
+<span class="field-label">Status at Notice</span><span>Circulated Dec 2001; output unknown <span class="cite">msg 3.331799</span></span>
+</div></div>
+</div>
+<h3>4b. Kaminski's Home PC</h3>
+<p>Kaminski has stated that he preserved copies of emails on his home PC and AOL account that disappeared from the Enron mail system <span class="cite">msg 3.343818</span>. The Raptor-related email to Ryan Siurek dated October 4, 2001 was specifically noted as having been recovered from personal storage after vanishing from his Enron mailbox. This personal archive may contain additional relevant documents.</p>
+<hr class="div">
+<h2>5. People and Dependency Map</h2>
+<h3>Internal Dependencies</h3>
+<ul><li><strong>RAC (Dave Gorte / Rick Buy):</strong> Kaminski's group was the quantitative engine for Risk Assessment and Control. VaR methodology, credit model validation, and operational risk quantification all flow through Research. Sally Beck's October 2001 email on operational risk noted the need for clear roles between RAC and supporting functions <span class="cite">msg 3.338921</span>.</li><li><strong>Enron Global Markets (Gary Hickerson):</strong> Research allocated 40% of its EGM billing to Hickerson's group (Equity Trading, Rate &amp; Currency, Agricultural, Convertible Trading) <span class="cite">msg 3.344903</span>.</li><li><strong>Enron Japan / Enron London:</strong> Nelson Neale's forward curve work for JCC directly served these desks <span class="cite">msg 3.332707</span>.</li><li><strong>Enron South America:</strong> The ModReg/SDDP model for Argentina was being developed in coordination with Kaminski's group. With Halliburton already departed and Kaminski leaving, no one owns this workstream <span class="cite">msg 3.338726</span>.</li><li><strong>Weather Desks (Mark Tawney):</strong> Mike Roberts' weather team is under Research; Tony Hamilton was deployed to London to support crude, weather derivatives, gas, and power <span class="cite">msg 3.340706</span>.</li><li><strong>DPR Reporting:</strong> Kaminski was on the distribution list for Daily Position Risk reporting, which continued operating post-bankruptcy <span class="cite">msg 3.331873</span>.</li><li><strong>Bankruptcy Estate / Accounting (Kent Castleman):</strong> The power/gas profitability study <span class="cite">msg 3.351665</span> and the 2002 budget/headcount variance analysis <span class="cite">msg 3.355494</span> both have direct relevance to post-bankruptcy financial accounting.</li><li><strong>Enron Credit (Craig):</strong> Multiple credit-analytics projects were awaiting approvals and data purchases from this function, including D&amp;B bankruptcy rate data and the EES private firm model <span class="cite">msg 3.338733</span>.</li></ul>
+<h3>External Dependencies</h3>
+<ul><li><strong>Prof. Darrell Duffie, Stanford University:</strong> Engaged as a paid consultant to review Enron's VaR and credit risk models. Kaminski notes in August 2001 that Enron owed Duffie money for 18 months of work <span class="cite">msg 3.355509</span>. The consulting relationship, payment obligations, and any remaining deliverables need immediate clarification.</li><li><strong>Prof. Ehud Ronn, UT Austin:</strong> Kaminski served as bridge to UT Energy Finance program; arranged Jeff Skilling's keynote for Feb 2002 conference [msg 3.355302, msg 3.355590]. Status of this commitment is unknown.</li><li><strong>Wharton School (Michael Tomczyk, Emerging Technologies Program):</strong> Enron was an industry partner in multiple Wharton programs including WeBI and the Tiger Team FAP [msg 3.340548, msg 3.349852, msg 3.338838]. Kaminski and Jeff Shankman were primary relationship owners.</li><li><strong>Prof. John D. Martin, Baylor University:</strong> Ongoing academic relationship; Martin forwarded critical Enron press coverage to Kaminski [msg 3.332667, msg 3.355529].</li><li><strong>KWI (David Warwick):</strong> Kaminski was a featured speaker at KWI User Group events for energy risk management software clients <span class="cite">msg 3.351965</span>.</li><li><strong>Houston Energy Group / Conoco (Gayle Hayter):</strong> Kaminski delivered a November 14, 2001 presentation on energy price volatility and credit risk management [msg 3.355972, msg 3.332697].</li><li><strong>ICBI / Gas &amp; PoweRisk conference:</strong> Zimin Lu replaced Kaminski for the November 2001 Paris event <span class="cite">msg 3.355975</span>.</li><li><strong>e-Acumen / Weather Risk Services:</strong> Partnership discussion for weather analytics platform was in progress with Mark Tawney's desk <span class="cite">msg 3.355466</span>.</li><li><strong>D&amp;B (Dun &amp; Bradstreet):</strong> Data vendor for bankruptcy rate data and EES private firm credit data. A purchase approval was pending from Craig as of October 2001 <span class="cite">msg 3.338733</span>.</li><li><strong>Altman Database (via London Credit):</strong> Recovery rate data from the Altman database had been received and analysis was in progress <span class="cite">msg 3.338733</span>.</li></ul>
+<hr class="div">
+<h2>6. Open Commitments and Unfinished Work</h2>
+<div class="cards">
+<div class="item-card">
+<p class="item-title">Power/gas profitability corroboration study</p>
+<div class="item-fields">
+<span class="field-label">Status</span><span>Spreadsheets delivered to Sarah Taylor; Research found figures "substantially at variance" with believed profitability; data irregularities noted <span class="cite">msg 3.351665</span></span>
+<span class="field-label">Risk</span><span>Reporting-integrity implications; work product must reach bankruptcy examiners</span>
+</div></div>
+<div class="item-card">
+<p class="item-title">Duffie consulting engagement: VaR documentation revision</p>
+<div class="item-fields">
+<span class="field-label">Status</span><span>Incomplete; Duffie awaiting revised Reliability VaR paper <span class="cite">msg 3.355509</span></span>
+<span class="field-label">Risk</span><span>Outstanding payment obligation; incomplete model audit</span>
+</div></div>
+<div class="item-card">
+<p class="item-title">Factor expansion (7 to 60) for VaR system</p>
+<div class="item-fields">
+<span class="field-label">Status</span><span>In development between Research, RAC, IT <span class="cite">msg 3.340608</span></span>
+<span class="field-label">Risk</span><span>No research owner post-disbanding</span>
+</div></div>
+<div class="item-card">
+<p class="item-title">Exotica library version synchronization Houston/London</p>
+<div class="item-fields">
+<span class="field-label">Status</span><span>Discussed but not resolved <span class="cite">msg 3.332052</span></span>
+<span class="field-label">Risk</span><span>Version drift may cause P&amp;L discrepancies</span>
+</div></div>
+<div class="item-card">
+<p class="item-title">Enron Credit projects: macro factor analysis, recovery rate analysis, EES private firm model, ratings downgrade study</p>
+<div class="item-fields">
+<span class="field-label">Status</span><span>All four workstreams in progress as of Oct 2001; D&amp;B data purchase awaiting approval <span class="cite">msg 3.338733</span></span>
+<span class="field-label">Risk</span><span>No research team to continue; incomplete analytical deliverables</span>
+</div></div>
+<div class="item-card">
+<p class="item-title">HJM simulation model validation and deployment</p>
+<div class="item-fields">
+<span class="field-label">Status</span><span>Code delivered to shared drive Nov 2001; review by Shanbhogue, Lu, Tamarchenko pending <span class="cite">msg 3.340532</span></span>
+<span class="field-label">Risk</span><span>No reviewer post-disbanding; code on shared drive at risk</span>
+</div></div>
+<div class="item-card">
+<p class="item-title">P Plus model documentation finalization</p>
+<div class="item-fields">
+<span class="field-label">Status</span><span>Early draft from Gibner; flagged as needing revision <span class="cite">msg 3.356198</span></span>
+<span class="field-label">Risk</span><span>Incomplete documentation for a deployed pricing model</span>
+</div></div>
+<div class="item-card">
+<p class="item-title">ModReg/SDDP setup for Argentina</p>
+<div class="item-fields">
+<span class="field-label">Status</span><span>Halliburton departed Nov 2; handoff to Gumucio incomplete <span class="cite">msg 3.338726</span></span>
+<span class="field-label">Risk</span><span>Model setup unfinished; no Enron staff assigned</span>
+</div></div>
+<div class="item-card">
+<p class="item-title">UT Austin Energy Finance Conference (Feb 21-22, 2002)</p>
+<div class="item-fields">
+<span class="field-label">Status</span><span>Skilling keynote arranged by Kaminski; status post-bankruptcy unknown <span class="cite">msg 3.355302</span></span>
+<span class="field-label">Risk</span><span>Enron brand/relationship commitment</span>
+</div></div>
+<div class="item-card">
+<p class="item-title">Wharton Tiger Team 2002 program</p>
+<div class="item-fields">
+<span class="field-label">Status</span><span>Recruitment/logistics in progress as of July 2001 <span class="cite">msg 3.338838</span></span>
+<span class="field-label">Risk</span><span>University partnership obligation</span>
+</div></div>
+<div class="item-card">
+<p class="item-title">Research Group cost allocations to business units</p>
+<div class="item-fields">
+<span class="field-label">Status</span><span>Billing framework in place across EGM, ENA, weather, insurance <span class="cite">msg 3.344903</span></span>
+<span class="field-label">Risk</span><span>Allocation records may be needed for bankruptcy accounting</span>
+</div></div>
+<div class="item-card">
+<p class="item-title">2002 budget plan variance analysis</p>
+<div class="item-fields">
+<span class="field-label">Status</span><span>Diane Fellers requested explanations for 26% headcount increase (14 additional people) and material variances in travel, conferences, and outside services; attached summary spreadsheet <span class="cite">msg 3.355494</span></span>
+<span class="field-label">Risk</span><span>Budget explanations may be incomplete; records needed for estate accounting</span>
+</div></div>
+<div class="item-card">
+<p class="item-title">Credit model comparative study for Duffie</p>
+<div class="item-fields">
+<span class="field-label">Status</span><span>Papers being compiled and edited <span class="cite">msg 3.351954</span></span>
+<span class="field-label">Risk</span><span>External academic deliverable</span>
+</div></div>
+<div class="item-card">
+<p class="item-title">Ethanol forward curve for Enron Global Markets</p>
+<div class="item-fields">
+<span class="field-label">Status</span><span>Model constructed; backtesting showed large SD; data gaps noted <span class="cite">msg 3.332707</span></span>
+<span class="field-label">Risk</span><span>Model integrity without maintainer</span>
+</div></div>
+<div class="item-card">
+<p class="item-title">Research Group Teamwork knowledge capture</p>
+<div class="item-fields">
+<span class="field-label">Status</span><span>Distributed to full group Dec 12, 2001 <span class="cite">msg 3.331799</span></span>
+<span class="field-label">Risk</span><span>Output, if any, is a critical continuity artifact; status unknown</span>
+</div></div>
+</div>
+<hr class="div">
+<h2>7. Unresolved Risk Signals Known Before Notice</h2>
+<h3>7a. Power and Gas Profitability Variance</h3>
+<p>On December 14, 2001, Rakesh Bharati emailed Sarah Taylor (cc: Kaminski, Shanbhogue, Desai, Donahue) reporting that Research's analysis of ORACLE risk management databases and EnronOnline data yielded profitability figures for power and gas trading that were "substantially at variance with what is normally believed to be the case." The group also found "irregularities in the data" that raised doubts about data quality. Research concluded it could not make an authoritative statement about the profitability of the power and gas units and forwarded spreadsheets for independent review <span class="cite">msg 3.351665</span>. This finding has direct implications for the accuracy of financial reporting and should be treated as a priority item for the bankruptcy examiner and outside counsel.</p>
+<h3>7b. VaR Methodology Gaps</h3>
+<p>Tanya Tamarchenko raised concerns in July 2001 that RAC's Convolution VaR initiative was proceeding without proper coordination with Research's Reliability VaR, and that credit for the factor-expansion idea was being misattributed. She warned that Research would lose the battle for IT resources if the system changes were implemented solely under the Convolution VaR umbrella <span class="cite">msg 3.340608</span>. This organizational tension remains unresolved.</p>
+<h3>7c. UK Power VaR Discrepancy</h3>
+<p>In May 2001, a significant variance between spreadsheet VaR and RisktRAC VaR for UK Power was identified. Naveen Andrews noted that even the lower spreadsheet VaR did not backtest well and recommended maintaining the higher RisktRAC figure (25MM) as a provision against back-end curve risk <span class="cite">msg 3.349878</span>. Whether this was fully resolved is unclear from available messages.</p>
+<h3>7d. Credit Model Disputes</h3>
+<p>Disagreements between Houston Research and London Research over the public-firm credit model were documented in May 2001. Markus Fiala (London) pressed Iris Mack to produce a report demonstrating her understanding of the business, calling it "top priority." Scott Salmon raised specific concerns about model testing adequacy <span class="cite">msg 3.349859</span>. The status of these model validation issues is unresolved in the mailbox.</p>
+<h3>7e. Exotica Version Fragmentation</h3>
+<p>The existence of different Exotica versions between Houston and London was flagged as a risk that could produce material P&amp;L discrepancies due to trade volume amplification <span class="cite">msg 3.332052</span>. Kaminski noted this should be routine maintenance but the problem persisted.</p>
+<h3>7f. Operational Risk Framework</h3>
+<p>An October 2001 RAC initiative to quantify enterprise-wide operational risk was in early stages. Sally Beck raised questions about scope, role definition, and potential duplication with existing processes. Kaminski was on the distribution list, and his group would likely have been assigned quantitative responsibilities <span class="cite">msg 3.338921</span>. This initiative has no research support post-disbanding.</p>
+<h3>7g. Credit Data and Model Gaps</h3>
+<p>As of October 2001, four credit-analytics workstreams were in preliminary or mid-stage progress: macroeconomic factor analysis awaiting D&amp;B data, recovery rate analysis using incomplete Altman data from London, an EES private firm model awaiting D&amp;B data processing, and a ratings-downgrade driver study in early draft <span class="cite">msg 3.338733</span>. All four are stalled without Research Group staff or budget approvals.</p>
+<hr class="div">
+<h2>8. Legal / Regulatory / Document Issues Known Before Notice</h2>
+<h3>8a. LJM/Raptor Valuation Refusal</h3>
+<p>On October 4, 2001, Kaminski emailed Ryan Siurek (cc: Rick Buy, David Port) stating he could not support the valuations his group had produced for LJM/Raptor transactions without examining the full set of legal documents. He described the transactions as "too complex and controversial to bypass due diligence requirements" <span class="cite">msg 3.343818</span>.</p>
+<p>On October 22, 2001, Kaminski reinforced this position in writing to Rakesh Bharati and Vasant Shanbhogue (cc: Andersen's Kimberly Scardino), stating he could not sign off on past analysis, and expressing specific concern about a conflict between the existence of a restriction and a put that he considered mutually exclusive <span class="cite">msg 3.343794</span>.</p>
+<h3>8b. Disappearance of Email from Enron Systems</h3>
+<p>Kaminski reported that his October 4, 2001 email to Siurek regarding LJM/Raptor valuations disappeared from his Enron mailbox. He preserved a copy on his home PC and forwarded it to the Special Committee's counsel, David Cohen at Wilmer, Cutler &amp; Pickering, on December 19, 2001. He re-sent it on December 28, 2001 because Cohen could not locate the original transmission, forwarding it also to the LJM Litigation mailbox and cc'ing Jan Cooley [msg 3.343818, msg 3.351620].</p>
+<h3>8c. Document Preservation Order</h3>
+<p>On October 26, 2001, General Counsel Jim Derrick issued a company-wide document preservation order related to LJM litigation under the Private Securities Litigation Reform Act, suspending all normal document destruction policies <span class="cite">msg 3.351131</span>. Kaminski was a recipient. His departure raises the question of how to ensure his files, personal archives, and any materials on his home PC are preserved.</p>
+<h3>8d. Kaminski as Witness</h3>
+<p>Kaminski's October 4 and October 22 emails position him as a potentially significant witness who:</p>
+<ul><li>Refused to certify valuations used in LJM/Raptor accounting</li><li>Documented his refusal contemporaneously</li><li>Identified specific technical concerns (restriction vs. put conflict)</li><li>Reported evidence of email deletion from corporate systems</li><li>Independently preserved evidence outside the Enron mail system</li><li>Engaged directly with Special Committee counsel</li></ul>
+<p>His departure increases the urgency of ensuring his continued cooperation as a witness and the formal preservation of all materials in his custody, including those on personal systems.</p>
+<h3>8e. Power/Gas Profitability Findings as Potential Evidence</h3>
+<p>The December 14, 2001 Research Group finding that power and gas profitability figures were "substantially at variance" with commonly believed numbers, and that data irregularities were discovered in the ORACLE databases <span class="cite">msg 3.351665</span>, constitutes a potential piece of evidence relevant to any investigation of Enron's reported trading profits. The spreadsheets were sent to Sarah Taylor; copies should be confirmed as preserved under the litigation hold.</p>
+<h3>8f. Outstanding Payment to Stanford / Duffie</h3>
+<p>Kaminski acknowledged in August 2001 that Enron owed Prof. Duffie money for 18 months of consulting work <span class="cite">msg 3.355509</span>. This is a potential creditor claim in the bankruptcy.</p>
+<h3>8g. Livelink and Shared Drive Preservation</h3>
+<p>The Research Group's Livelink document repository <span class="cite">msg 3.349918</span> and the o:\research\common shared drive <span class="cite">msg 3.340532</span> both fall within the scope of the document preservation order and contain model documentation, source code, and analytical work product. If user access lapses or storage is decommissioned without preservation, the company may face spoliation risk.</p>
+<hr class="div">
+<h2>9. 48-Hour Action Plan</h2>
+<h3>IMMEDIATE (Hours 0-12)</h3>
+<ol><li><strong>Secure Fallon's formal software transfer letter.</strong> Kaminski is waiting for written instructions <span class="cite">msg 3.351489</span>. Until this letter is issued, the software sits in limbo. Fallon or his delegate must issue the letter today specifying: what software, to whom, and the documentation required.</li></ol>
+<ol><li><strong>Assign interim custody of Research Group assets.</strong> Designate a named individual (recommended: Vasant Shanbhogue or Tanya Tamarchenko if still employed) as custodian of all Research Group code, documentation, and work product pending permanent assignment.</li></ol>
+<ol><li><strong>Preserve Kaminski's Enron systems access and mailbox.</strong> Do not terminate accounts or delete data. Place a litigation hold on his mailbox, home directories, shared drives, and any PC or server storage used by Research.</li></ol>
+<ol><li><strong>Preserve Research Group shared storage.</strong> Place an explicit hold on the Livelink repository <span class="cite">msg 3.349918</span> and the o:\research\common shared drive <span class="cite">msg 3.340532</span>. Freeze all access-revocation and decommissioning actions. Export a full directory listing of both systems.</li></ol>
+<ol><li><strong>General Counsel contact with Kaminski.</strong> Arrange a meeting to discuss: (a) his cooperation as a witness; (b) the preservation of materials on his home PC and AOL account; (c) the scope of materials already provided to Wilmer counsel; (d) the power/gas profitability study spreadsheets and their implications.</li></ol>
+<ol><li><strong>Contact Jim Derrick / outside counsel</strong> regarding the reported disappearance of the October 4 Siurek email from Enron systems <span class="cite">msg 3.343818</span>. Determine whether an investigation of that deletion is warranted.</li></ol>
+<ol><li><strong>Secure power/gas profitability study outputs.</strong> Confirm that the spreadsheets sent by Bharati to Sarah Taylor on December 14, 2001 <span class="cite">msg 3.351665</span> are preserved and route them to the bankruptcy examiner and outside counsel.</li></ol>
+<h3>URGENT (Hours 12-24)</h3>
+<ol><li><strong>Conduct exit interview with Kaminski</strong> focused on: complete inventory of software/models his group maintained (including HJM, P Plus, ModReg/SDDP, and any others not yet surfaced); location of source code, compiled libraries, and documentation; status of all open projects; list of external consultants and any outstanding payment obligations; status of the Research Group Teamwork knowledge-capture initiative <span class="cite">msg 3.331799</span>.</li></ol>
+<ol><li><strong>Individual retention conversations</strong> with Shanbhogue, Tamarchenko, Lu, Bharati, De, Roberts, Neale, Gibner, Issler, Dhar, and Mora. Determine who is willing to stay and under what conditions. Without a group head, attrition risk is extreme.</li></ol>
+<ol><li><strong>Contact Prof. Duffie</strong> to determine: status of consulting engagement, outstanding deliverables, amount owed, and whether he holds any Enron proprietary materials.</li></ol>
+<ol><li><strong>Assess Exotica deployment.</strong> Determine all locations where Exotica is installed, which version each desk is running, and whether any active positions depend on it for daily valuation.</li></ol>
+<ol><li><strong>Inventory credit-analytics workstreams.</strong> Determine the status of the four Enron Credit projects <span class="cite">msg 3.338733</span> and whether the D&amp;B data purchase was ever approved. Identify who, if anyone, can continue this work.</li></ol>
+<h3>FOLLOW-UP (Hours 24-48)</h3>
+<ol><li><strong>Organizational decision:</strong> Determine where the quantitative research function will reside in the post-reorganization structure. If it is being eliminated, create a plan for transitioning model maintenance to RAC or individual desks.</li></ol>
+<ol><li><strong>External relationship triage.</strong> Contact Wharton (Tomczyk), UT Austin (Ronn), and Baylor (Martin) to clarify Enron's status in academic partnerships and any remaining obligations.</li></ol>
+<ol><li><strong>Review Research Group cost allocation records</strong> <span class="cite">msg 3.344903</span> and 2002 budget variance documentation <span class="cite">msg 3.355494</span> for accuracy and completeness; these will be needed by the bankruptcy estate.</li></ol>
+<ol><li><strong>Confirm status of UT Energy Finance Conference</strong> (Feb 21-22) and any other speaking/sponsorship commitments Kaminski made on Enron's behalf.</li></ol>
+<ol><li><strong>Locate and preserve Research Group Teamwork outputs.</strong> Determine whether the December 2001 knowledge-capture initiative <span class="cite">msg 3.331799</span> produced any documentation; if so, secure it as a continuity artifact.</li></ol>
+<ol><li><strong>Assess ModReg/SDDP status for Argentina.</strong> With Halliburton already departed <span class="cite">msg 3.338726</span>, determine whether Gumucio or anyone else can complete setup, or whether the project should be formally closed.</li></ol>
+<hr class="div">
+<h2>10. Follow-Up Questions</h2>
+<ol><li>Has Jim Fallon issued the software transfer letter referenced by Kaminski? If not, why not, and what is the expected timeline?</li><li>Who in the reorganized EWS structure is responsible for model validation and quantitative risk methodology?</li><li>Has anyone other than Kaminski reported email disappearances from Enron systems? Has IT investigated?</li><li>What is the complete inventory of consulting agreements Kaminski executed with external academics (Duffie, potentially others)? What amounts are outstanding?</li><li>Is Kaminski's departure voluntary or was it precipitated by the group disbanding? Does he have severance or non-compete terms?</li><li>Has Kaminski been contacted by any external parties (SEC, plaintiffs' counsel, congressional investigators) regarding his knowledge of LJM/Raptor valuations?</li><li>What is the status of Kaminski's PRC evaluations for the approximately 45 Research Group members? Are performance records current?</li><li>Are there any Enron proprietary materials on Kaminski's home PC beyond the emails he has already disclosed? Is there a legal basis to request their return or preservation?</li><li>What happened to the Research Group's physical workspace (EB 1969)? Are files, notebooks, and whiteboard content being preserved?</li><li>Does the Exotica library contain any third-party licensed code that creates transfer or licensing complications?</li><li>Has Sarah Taylor or anyone else acted on the power/gas profitability study findings <span class="cite">msg 3.351665</span>? Have the spreadsheets and underlying ORACLE queries been preserved?</li><li>What is the status of the Livelink repository? Is IT aware that it must be preserved under the litigation hold? Who currently has administrative access?</li><li>Was the 2002 budget variance analysis <span class="cite">msg 3.355494</span> ever completed? Are the headcount increase justifications documented?</li><li>Did the Research Group Teamwork initiative <span class="cite">msg 3.331799</span> produce any written output, and if so, where is it stored?</li><li>Who took over the D&amp;B data purchase approval process for the credit projects after Kaminski's group was disbanded <span class="cite">msg 3.338733</span>?</li></ol>
+<hr class="div">
+<h2>11. Evidence Table</h2>
+<table class="ref"><thead><tr>
+<th>Claim</th>
+<th>Message ID</th>
+<th>Date</th>
+</tr></thead><tbody>
+<tr>
+<td>Kaminski states last day Jan 31; group disbanded; Fallon halted software transfer</td>
+<td><span class="cite">msg 3.351489</span></td>
+<td>2002-01-16</td>
+</tr>
+<tr>
+<td>Kaminski instructs Bharati: cannot support past valuation analysis; cites restriction/put conflict</td>
+<td><span class="cite">msg 3.343794</span></td>
+<td>2002-01-16 (forwarding 2001-10-22 original)</td>
+</tr>
+<tr>
+<td>EWS reorganization under Fallon; Gorte heads RAC; no research function listed</td>
+<td><span class="cite">msg 3.338969</span></td>
+<td>2002-01-09</td>
+</tr>
+<tr>
+<td>Kaminski on DPR reporting distribution list post-bankruptcy</td>
+<td><span class="cite">msg 3.331873</span></td>
+<td>2001-12-28</td>
+</tr>
+<tr>
+<td>Kaminski reforwards Raptor email to LJM Litigation mailbox; notes email disappearance</td>
+<td><span class="cite">msg 3.351620</span></td>
+<td>2001-12-28</td>
+</tr>
+<tr>
+<td>Kaminski forwards Raptor email to Wilmer counsel; reports email deleted from Enron system</td>
+<td><span class="cite">msg 3.343818</span></td>
+<td>2001-12-28 (forwarding 2001-12-19 and 2001-10-04 originals)</td>
+</tr>
+<tr>
+<td>Power/gas profitability study: figures "substantially at variance"; data irregularities</td>
+<td><span class="cite">msg 3.351665</span></td>
+<td>2001-12-14</td>
+</tr>
+<tr>
+<td>Research Group teamwork knowledge-capture initiative circulated</td>
+<td><span class="cite">msg 3.331799</span></td>
+<td>2001-12-12</td>
+</tr>
+<tr>
+<td>Research Group team roster (~45 people, Houston and London)</td>
+<td><span class="cite">msg 3.351673</span></td>
+<td>2001-12-12</td>
+</tr>
+<tr>
+<td>Bharati confirms receipt of Kaminski's valuation refusal</td>
+<td><span class="cite">msg 3.355985</span></td>
+<td>2001-11-06</td>
+</tr>
+<tr>
+<td>HJM simulation model: C source code delivered to shared drive by Issler</td>
+<td><span class="cite">msg 3.340532</span></td>
+<td>2001-11-09</td>
+</tr>
+<tr>
+<td>Nelson Neale: JCC forward curve, ethanol curve, multiple open projects</td>
+<td><span class="cite">msg 3.332707</span></td>
+<td>2001-11-02</td>
+</tr>
+<tr>
+<td>Houston Energy Group: Kaminski presented on energy price volatility Nov 14, 2001</td>
+<td><span class="cite">msg 3.355972</span></td>
+<td>2001-11-02</td>
+</tr>
+<tr>
+<td>Paris PoweRisk conference: Zimin Lu replaced Kaminski as speaker</td>
+<td><span class="cite">msg 3.355975</span></td>
+<td>2001-11-02</td>
+</tr>
+<tr>
+<td>Livelink document repository: user access list for Research Group</td>
+<td><span class="cite">msg 3.349918</span></td>
+<td>2001-10-29</td>
+</tr>
+<tr>
+<td>Jim Derrick issues company-wide document preservation order</td>
+<td><span class="cite">msg 3.351131</span></td>
+<td>2001-10-26</td>
+</tr>
+<tr>
+<td>Enron Credit projects review: four workstreams in progress</td>
+<td><span class="cite">msg 3.338733</span></td>
+<td>2001-10-18</td>
+</tr>
+<tr>
+<td>ModReg/SDDP for Argentina: Halliburton departing; setup incomplete</td>
+<td><span class="cite">msg 3.338726</span></td>
+<td>2001-10-18</td>
+</tr>
+<tr>
+<td>Wharton Emerging Technologies Program industry partner events</td>
+<td><span class="cite">msg 3.340548</span></td>
+<td>2001-10-18</td>
+</tr>
+<tr>
+<td>Managing Director quarterly meeting: Kaminski listed among MD attendees</td>
+<td><span class="cite">msg 3.338735</span></td>
+<td>2001-10-18</td>
+</tr>
+<tr>
+<td>Sally Beck raises operational risk framework scope and role questions</td>
+<td><span class="cite">msg 3.338921</span></td>
+<td>2001-10-03</td>
+</tr>
+<tr>
+<td>Duffie confirms receipt and interest in Reliability VaR paper</td>
+<td><span class="cite">msg 3.340626</span></td>
+<td>2001-09-01</td>
+</tr>
+<tr>
+<td>e-Acumen weather analytics partnership discussion forwarded to Mike Roberts</td>
+<td><span class="cite">msg 3.355466</span></td>
+<td>2001-09-06</td>
+</tr>
+<tr>
+<td>2002 budget plan: 26% headcount increase; variance explanations pending from Kaminski</td>
+<td><span class="cite">msg 3.355494</span></td>
+<td>2001-08-30</td>
+</tr>
+<tr>
+<td>Duffie reviews Reliability VaR; finds documentation insufficient; Kaminski notes money owed</td>
+<td><span class="cite">msg 3.355509</span></td>
+<td>2001-08-29</td>
+</tr>
+<tr>
+<td>UT Austin Energy Finance Conference: Skilling keynote arranged for Feb 2002</td>
+<td><span class="cite">msg 3.355302</span></td>
+<td>2001-08-02</td>
+</tr>
+<tr>
+<td>UT Austin: Kaminski presentation to MBA students and recruiting reception</td>
+<td><span class="cite">msg 3.355590</span></td>
+<td>2001-08-06</td>
+</tr>
+<tr>
+<td>Summer intern Rusty Parks: Kaminski recommended full-time offer</td>
+<td><span class="cite">msg 3.356256</span></td>
+<td>2001-07-23</td>
+</tr>
+<tr>
+<td>Tanya Tamarchenko raises VaR factor expansion priority and RAC resource competition</td>
+<td><span class="cite">msg 3.340608</span></td>
+<td>2001-07-23</td>
+</tr>
+<tr>
+<td>Wharton Tiger Team 2002 program recruitment</td>
+<td><span class="cite">msg 3.338838</span></td>
+<td>2001-07-03</td>
+</tr>
+<tr>
+<td>P Plus pricing model: early draft documentation from Gibner via Lu</td>
+<td><span class="cite">msg 3.356198</span></td>
+<td>2001-06-07</td>
+</tr>
+<tr>
+<td>Exotica options library version discrepancies between Houston and London</td>
+<td><span class="cite">msg 3.332052</span></td>
+<td>2001-05-31</td>
+</tr>
+<tr>
+<td>Credit model dispute: public firm model concerns between London and Houston</td>
+<td><span class="cite">msg 3.349859</span></td>
+<td>2001-05-29</td>
+</tr>
+<tr>
+<td>Tamarchenko contacts Albanese re: Convolution VaR for non-normal distributions</td>
+<td><span class="cite">msg 3.352158</span></td>
+<td>2001-05-25</td>
+</tr>
+<tr>
+<td>Wharton WeBI partnership; Louise Kitchen notes Kaminski and Shankman as primary contacts</td>
+<td><span class="cite">msg 3.349852</span></td>
+<td>2001-05-22</td>
+</tr>
+<tr>
+<td>UK Power VaR discrepancy between spreadsheet and RisktRAC</td>
+<td><span class="cite">msg 3.349878</span></td>
+<td>2001-05-18</td>
+</tr>
+<tr>
+<td>PRC process changes distributed to full Research Group roster</td>
+<td><span class="cite">msg 3.340471</span></td>
+<td>2001-05-11</td>
+</tr>
+<tr>
+<td>Zimin Lu: bid-offer spread literature research for Bob Lee</td>
+<td><span class="cite">msg 3.356065</span></td>
+<td>2001-05-11</td>
+</tr>
+<tr>
+<td>Chonawee Supatgiat: broadband/movie market pricing framework for EBS</td>
+<td><span class="cite">msg 3.343911</span></td>
+<td>2001-04-26</td>
+</tr>
+<tr>
+<td>Research Group cost allocation: 17.5% to EGM, 40% of that to Hickerson's group</td>
+<td><span class="cite">msg 3.344903</span></td>
+<td>2001-04-26</td>
+</tr>
+<tr>
+<td>KWI User Group: Kaminski invited as featured speaker; arranged London replacement</td>
+<td><span class="cite">msg 3.351965</span></td>
+<td>2001-04-25</td>
+</tr>
+<tr>
+<td>Duffie credit model comparative study; papers being compiled</td>
+<td><span class="cite">msg 3.351954</span></td>
+<td>2001-04-25</td>
+</tr>
+<tr>
+<td>Kaminski proposes Stinson Gibner for London research leadership role</td>
+<td><span class="cite">msg 3.340706</span></td>
+<td>2001-04-17</td>
+</tr>
+<tr>
+<td>Weather team: Tony Hamilton deployed to London; Steve Bennett on temporary assignment</td>
+<td><span class="cite">msg 3.340706</span></td>
+<td>2001-04-17</td>
+</tr>
+<tr>
+<td>Baylor University: Kaminski/Martin academic relationship; Martin forwards Enron coverage</td>
+<td><span class="cite">msg 3.332667</span></td>
+<td>2001-11-27</td>
+</tr>
+</tbody></table>
+<hr class="div">
+<h2>12. Method and Limits</h2>
+<p>This brief was produced by a fixed workflow, not an ad hoc search: the notice message set the trigger and the 48-hour clock; the corpus was frozen to messages dated on or before the notice (5,400 of 6,000 messages eligible), so the brief reflects only what was knowable at the notice; an operational census mapped the whole mailbox by continuity lenses (blocked handoffs, asset and software dependency, external commitments, key-person dependency, legal and preservation, successor gaps) so that important categories surface even when an individual item looks routine; an agentic investigation then read the frozen mailbox, followed threads, and drafted the brief; a coverage audit compared that draft against the census and flagged material items the draft had not addressed; those gaps were investigated and closed; and finally every quotation was verified verbatim against its cited message, any non-verbatim passage was demoted to paraphrase, and every citation was confirmed to exist and to predate the notice. The verification results for this brief are recorded in the accompanying verification report.</p>
+<p><strong>Limits:</strong></p>
+<ul><li>Only pre-notice messages are in scope for the main brief; the notice message itself is included as the trigger. Post-notice communications are out of scope.</li><li>The coverage audit reduces, but does not eliminate, the risk of a silently missed item. Its reach depends on the operational lenses being maintained for this category of engagement.</li><li>Verification checks quotation fidelity, citation validity, and the date freeze. It does not certify that every paraphrase is complete or that every cited message fully supports the claim around it.</li><li>Attachments were identified by filename but their contents were not parsed. A full engagement would ingest them.</li><li>This brief reflects one mailbox only. Messages held by other custodians may carry context not visible here.</li><li>No interviews were conducted; the analysis relies on the email record.</li><li>Some messages appear in multiple copies due to forwarding or archival duplication; the earliest or most complete version was cited.</li></ul>
+<div class="docfoot">Sample Key-Person Risk Brief generated by Global Active. Built from the public EDRM Enron Email Data Set (EDRM.NET), originally released by the U.S. Federal Energy Regulatory Commission. Public historical data, for demonstration only. Not customer data, not legal advice, and not a present-day assessment of any person or company.</div>
+</div>
+</body>
+</html>
