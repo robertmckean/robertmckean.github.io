@@ -471,26 +471,25 @@
     <h2 class="section-label">Data Security</h2>
     <section aria-label="Data security overview">
       <p class="description">
-        We take your confidential data seriously. Client records are handled through a secure,
-        single-client workflow: written data authority, controlled intake, an encrypted engagement
-        workbench, restricted access, and deletion at closeout.
+        <strong>The security model starts at the model layer.</strong> Key-Person Risk Brief runs
+        Claude through Amazon Bedrock with account data retention set to "none." The model processes
+        approved records inside AWS to produce the brief; prompts and outputs are not written to
+        durable storage, are not passed to the model's maker, and are not used to train foundation
+        models. This is built for sensitive corporate records, not consumer chatbot use.
       </p>
       <p class="description">
-        Client records are not sent to a consumer chatbot. When model assistance is needed,
-        approved record content is processed through Amazon Bedrock with account data retention
-        set to none. Under that Bedrock no-retention path, prompts and outputs are not written
-        to durable storage or shared with model providers, and client records are not used to
-        train base models. The SOW and data-handling terms disclose provider use, retention
-        boundaries, and platform safety obligations before any client records are processed.
+        Every engagement stays single-client: written data authority, controlled intake, Bedrock
+        no-retention processing, encrypted handling, named-user access, source-cited outputs, and
+        confirmed deletion at closeout.
       </p>
       <p class="description">
         <a class="button" href="../data-security-flow/index.html">View the data security flow</a>
       </p>
       <div class="security-flow" aria-label="Security flow">
         <div class="flow-node"><strong>Client-controlled upload</strong><span>Encrypted archive, separate passphrase channel, written hash.</span></div>
-        <div class="flow-node"><strong>Encrypted workbench</strong><span>Designated per-engagement encrypted workspace for receipt, conversion, extraction, and review.</span></div>
-        <div class="flow-node"><strong>Verified processing</strong><span>Source-grounded indexing, citation checks, coverage review, and human review before delivery.</span></div>
-        <div class="flow-node"><strong>Secure workspace</strong><span>Temporary authenticated access for named users through the engagement window.</span></div>
+        <div class="flow-node"><strong>Encrypted vault</strong><span>Per-engagement encrypted storage for receipt, conversion, extraction, and review.</span></div>
+        <div class="flow-node"><strong>No-retention AI &amp; review</strong><span>Customer data runs through Amazon Bedrock with retention set to "none." Citations, coverage, and deliverables are human-reviewed before delivery.</span></div>
+        <div class="flow-node"><strong>Secure query workspace</strong><span>Named users can ask follow-up questions and inspect source-cited evidence for 30 days after workspace activation.</span></div>
         <div class="flow-node"><strong>Deletion closeout</strong><span>Hosted access removed, workspace materials deleted, and written confirmation to your team.</span></div>
       </div>
     </section>
