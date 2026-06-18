@@ -476,10 +476,12 @@
         workbench, restricted access, and deletion at closeout.
       </p>
       <p class="description">
-        Commercial LLM assistance is part of the workflow. Current processing uses Amazon
-        Bedrock with account data retention set to none. Client records are not used to train
-        base models; the SOW and data-handling terms disclose provider use, retention limits,
-        and platform safety obligations before any client records are processed.
+        Client records are not sent to a consumer chatbot. When model assistance is needed,
+        approved record content is processed through Amazon Bedrock with account data retention
+        set to none. Under that Bedrock no-retention path, prompts and outputs are not written
+        to durable storage or shared with model providers, and client records are not used to
+        train base models. The SOW and data-handling terms disclose provider use, retention
+        boundaries, and platform safety obligations before any client records are processed.
       </p>
       <p class="description">
         <a class="button" href="../data-security-flow/index.html">View the data security flow</a>
