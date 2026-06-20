@@ -471,11 +471,12 @@
     <h2 class="section-label">Data Security</h2>
     <section aria-label="Data security overview">
       <p class="description">
-        <strong>The security model starts at the model layer.</strong> Key-Person Risk Brief runs
-        Claude through Amazon Bedrock with account data retention set to "none." The model processes
-        approved records inside AWS to produce the brief; prompts and outputs are not written to
-        durable storage, are not passed to the model's maker, and are not used to train foundation
-        models. This is built for sensitive corporate records, not consumer chatbot use.
+        <strong>Your data is protected at the model layer.</strong> To protect your sensitive
+        corporate data, Key-Person Risk Brief uses Amazon Bedrock with account data retention set to
+        "none." This means your records are processed inside AWS only to produce your brief: prompts
+        and outputs are not written to durable storage, are not used to train AI models, and are not
+        shared with any outside model provider for their own use. It is built for sensitive corporate
+        records, not consumer chatbot use.
       </p>
       <p class="description">
         Every engagement stays single-client: written data authority, controlled intake, Bedrock
@@ -486,9 +487,9 @@
         <a class="button" href="../data-security-flow/index.html">View the data security flow</a>
       </p>
       <div class="security-flow" aria-label="Security flow">
-        <div class="flow-node"><strong>Client-controlled upload</strong><span>Encrypted archive, separate passphrase channel, written hash.</span></div>
+        <div class="flow-node"><strong>Client-controlled upload</strong><span>Encrypted archive, separate passphrase channel, file-integrity check.</span></div>
         <div class="flow-node"><strong>Encrypted vault</strong><span>Per-engagement encrypted storage for receipt, conversion, extraction, and review.</span></div>
-        <div class="flow-node"><strong>No-retention AI &amp; review</strong><span>Customer data runs through Amazon Bedrock with retention set to "none." Citations, coverage, and deliverables are human-reviewed before delivery.</span></div>
+        <div class="flow-node"><strong>No-retention AI &amp; review</strong><span>Records are processed in Amazon Bedrock with retention set to "none." Citations, coverage, and deliverables are human-reviewed before delivery.</span></div>
         <div class="flow-node"><strong>Secure query workspace</strong><span>Named users can ask follow-up questions and inspect source-cited evidence for 30 days after workspace activation.</span></div>
         <div class="flow-node"><strong>Deletion closeout</strong><span>Hosted access removed, workspace materials deleted, and written confirmation to your team.</span></div>
       </div>
@@ -499,6 +500,7 @@
       <article class="panel">
         <h3>Key-Person Risk Brief is</h3>
         <ul>
+          <li>secure from encrypted upload to confirmed deletion;</li>
           <li>a white-glove continuity-risk engagement;</li>
           <li>source-cited and human-reviewed;</li>
           <li>focused on records the client is authorized to provide;</li>
