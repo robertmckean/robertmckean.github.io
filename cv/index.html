@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800;900&display=swap" rel="stylesheet">
   <style>
     :root {
+      color-scheme: light;
       --bg: #f8f7f3;
       --ink: #1f2424;
       --muted: #68706f;
@@ -19,6 +20,19 @@
       --accent: #2a5f4a;
       --card: #fdfcf8;
       --max: 980px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color-scheme: dark;
+        --bg: #111615;
+        --ink: #eef3ef;
+        --muted: #a6b4af;
+        --line: #33413d;
+        --link: #8fcbe4;
+        --accent: #8bd0a9;
+        --card: #18211f;
+      }
     }
 
     * { box-sizing: border-box; }

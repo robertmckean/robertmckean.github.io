@@ -11,6 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@800;900&display=swap" rel="stylesheet">
   <style>
     :root {
+      color-scheme: light;
       --bg: #f8f7f3;
       --ink: #1f2424;
       --muted: #68706f;
@@ -19,7 +20,25 @@
       --accent: #2a5f4a;
       --accent-2: #8a5a1f;
       --card: #fdfcf8;
+      --on-accent: #fff;
+      --button-hover: var(--ink);
       --max: 1120px;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color-scheme: dark;
+        --bg: #111615;
+        --ink: #eef3ef;
+        --muted: #a6b4af;
+        --line: #33413d;
+        --link: #8fcbe4;
+        --accent: #8bd0a9;
+        --accent-2: #d1a05a;
+        --card: #18211f;
+        --on-accent: #111615;
+        --button-hover: #386c55;
+      }
     }
 
     * { box-sizing: border-box; }
@@ -148,14 +167,14 @@
 
     .button.primary {
       background: var(--accent);
-      color: #fff;
+      color: var(--on-accent);
     }
 
     .button:hover,
     .button:focus {
       text-decoration: none;
-      background: var(--ink);
-      border-color: var(--ink);
+      background: var(--button-hover);
+      border-color: var(--button-hover);
       color: #fff;
     }
 
