@@ -369,6 +369,70 @@
       color: var(--muted);
     }
 
+    .faq {
+      display: grid;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .faq details {
+      border: 1px solid var(--line);
+      background: var(--card);
+    }
+
+    .faq summary {
+      list-style: none;
+      cursor: pointer;
+      position: relative;
+      padding: 14px 46px 14px 16px;
+      color: var(--ink);
+      font-weight: 700;
+      font-size: 1.02rem;
+      line-height: 1.35;
+    }
+
+    .faq summary::-webkit-details-marker { display: none; }
+
+    .faq summary::after {
+      content: "";
+      position: absolute;
+      right: 18px;
+      top: 50%;
+      width: 9px;
+      height: 9px;
+      border-right: 2px solid var(--accent);
+      border-bottom: 2px solid var(--accent);
+      transform: translateY(-70%) rotate(45deg);
+      transition: transform 0.15s ease;
+    }
+
+    .faq details[open] summary::after {
+      transform: translateY(-30%) rotate(-135deg);
+    }
+
+    .faq summary:hover,
+    .faq summary:focus-visible {
+      background: var(--bg);
+      outline: none;
+    }
+
+    .faq .faq-body {
+      padding: 4px 18px 16px;
+      color: var(--muted);
+      font-size: 0.97rem;
+      line-height: 1.55;
+    }
+
+    .faq .faq-body p { margin-top: 10px; }
+    .faq .faq-body p:first-child { margin-top: 4px; }
+    .faq .faq-body strong { color: var(--ink); }
+
+    .faq .faq-close {
+      margin-top: 14px;
+      color: var(--ink);
+      font-weight: 600;
+    }
+
     footer {
       margin-top: 22px;
       color: var(--muted);
@@ -397,6 +461,7 @@
     <div class="topbar">
       <a class="brand" href="../index.html">Global Active</a>
       <nav class="nav" aria-label="Site links">
+        <a href="#faq">FAQ</a>
         <a href="../cv/index.html">CV</a>
         <a href="https://github.com/robertmckean" target="_blank" rel="noopener noreferrer">GitHub</a>
         <a href="https://www.linkedin.com/in/robert-mckean-ai/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
@@ -550,6 +615,53 @@
           <li>a promise of complete detection or no blind spots.</li>
         </ul>
       </article>
+    </section>
+
+    <h2 class="section-label" id="faq">FAQ</h2>
+    <section class="faq" aria-label="Frequently asked questions">
+      <details>
+        <summary>Why can't we just use AI ourselves?</summary>
+        <div class="faq-body">
+          <p><strong>Someone has to own it.</strong> This isn't a quick AI prompt. It's extracting, verifying, and organizing years of one person's work into something trustworthy. Your team is already stretched, and a distracting side project is the last thing you need when a key person is walking out the door and you need answers now.</p>
+          <p><strong>The information you need is scattered and buried.</strong> A key employee's knowledge could be spread across years of email, docs, and code. The decisions that matter may be hidden in the noise. Extracting and verifying the results could take days or weeks of work, with no assurance of finding the facts that matter now.</p>
+          <p><strong>You'd be putting your most sensitive data on the open internet.</strong> Doing it yourself means pasting everything a departing employee touched into a consumer AI tool, where it may be retained, reviewed, or used for training. We run on AWS with zero data retention: never stored, never reviewed, never trained on.</p>
+          <p><strong>The data is a legal and privacy minefield.</strong> It contains regulated, privileged, and personal material: health information, legal matters, private communications. Handling it without proper scope, consent, and governance isn't just risky. It's a liability your counsel will flag.</p>
+          <p><strong>An answer you can't verify is worse than no answer at all.</strong> Raw AI can produce confident answers with no source and no way to check results against the facts. Act on knowledge you can't trace or verify, and a confident guess becomes an expensive mistake.</p>
+          <p class="faq-close">That's why this is a managed service, not a tool. We own the process, the security, and the provenance, so you get knowledge you can trust, without exposing your data or your team to the risk of doing it yourself.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>Why is KPRB better than AI for this problem?</summary>
+        <div class="faq-body">
+          <p><strong>AI can't hold all the information at once.</strong> An LLM can only reason over what fits in its working memory. A key employee's knowledge may span years of email, documents, and code. As the content grows, the model drops earlier detail, loses the thread, and compresses away the nuance that mattered. KPRB extracts and stores the entire body of work intact, so no answer depends on what fit into a single prompt.</p>
+          <p><strong>AI makes things up.</strong> When an LLM doesn't know, the model doesn't say so. AI generates the most plausible-sounding answer, which reads exactly like the truth. For a departed employee's reasoning, a confident fabrication is worse than a blank, because a false answer corrupts every decision built upon it. KPRB ties every answer to actual source material, so there's nothing to invent.</p>
+          <p><strong>AI has a poor sense of time.</strong> An LLM can't reliably tell what came first, what was later reversed, or what's still true. A decision and its reversal look equally valid. Knowing the difference is often the whole point. KPRB preserves the sequence, so you see not just what was decided, but what still stands.</p>
+          <p><strong>AI can't show you where the answer came from.</strong> Raw AI gives you a fluent answer with no way to check the source. You can't audit the result, defend it to a board or a court, or confirm the model even used the right inputs. KPRB binds every answer to its exact source, so you can trace it, prove it, and stand behind it.</p>
+          <p><strong>AI can't tell what matters.</strong> An LLM reads all text as roughly equal. The model misses the one load-bearing decision buried in a routine thread, the offhand constraint that the whole system secretly depends on. KPRB surfaces and preserves exactly those high-significance facts.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How do you keep our data secure?</summary>
+        <div class="faq-body">
+          <p><strong>Your data runs on AWS, never on the open internet.</strong> Everything is processed inside Amazon Bedrock, the same enterprise infrastructure trusted by banks, hospitals, and governments. Your material never touches a consumer AI tool and never leaves a controlled environment.</p>
+          <p><strong>Zero data retention.</strong> Your content is never stored, never reviewed, and never used to train any AI model. It exists only for as long as the work requires. What you hand us does not become part of anyone else's system.</p>
+          <p><strong>Encrypted before it ever reaches us.</strong> You package and encrypt your data before it leaves your building, following a process we provide. It's protected in transit and at rest, so it's never exposed at any point in the handoff.</p>
+          <p><strong>Least-privilege access.</strong> Only the people and processes required to produce your brief can touch your data, nothing more. There's no sprawling internal access and no third parties in the pipeline, which means the smallest possible attack surface.</p>
+          <p><strong>When the engagement ends, we destroy everything.</strong> All source material and all results are permanently destroyed at the close of the project. We keep no copy of your data, and nothing about your engagement remains in our systems.</p>
+        </div>
+      </details>
+
+      <details>
+        <summary>How do you protect sensitive and private information?</summary>
+        <div class="faq-body">
+          <p><strong>We focus on work knowledge, not personal information.</strong> The goal is professional continuity: decisions, context, and institutional knowledge the company needs to keep running. We take deliberate steps to filter out personal and unrelated content, keeping the brief focused on what the business actually needs.</p>
+          <p><strong>You define the scope. Information stays inside company boundaries.</strong> We work only with data the company already owns and has the right to access: its own systems, accounts, and records.</p>
+          <p><strong>Trust works best in the open, not in secret.</strong> The strongest engagements are ones where the departing employee knows their knowledge is being preserved for the team. Handled transparently, this is a professional handoff, not employee surveillance.</p>
+          <p><strong>Your rules govern the engagement.</strong> You remain in charge of what's collected and how the results are used. We build the process to fit your privacy, HR, and legal requirements, not to work around them.</p>
+        </div>
+      </details>
     </section>
 
     <section class="contact-panel" aria-label="Contact">
