@@ -493,7 +493,7 @@
       <aside class="summary-card" aria-label="Service summary">
         <h2>Designed for urgent transitions</h2>
         <div class="facts">
-          <p class="fact"><strong>Timeline</strong> 48 to 72 hours after signed documents and usable data are received.</p>
+          <p class="fact"><strong>Timeline</strong> 48 to 72 hours after signing, deposit, and our written acceptance of your data.</p>
           <p class="fact"><strong>Inputs</strong> Work records supplied by the client, with scope and sensitive-material rules set in writing.</p>
           <p class="fact"><strong>Deliverables</strong> Executive brief, verified evidence trail with coverage notes and documented limits, secure query user interface, and deletion confirmation at closeout.</p>
           <p class="fact"><strong>Method</strong> AI-augmented retrieval, grounded in approved records and backed by source citations, with quotes and claims verified before delivery.</p>
@@ -530,12 +530,12 @@
       </article>
       <article class="panel">
         <h3>Source-linked query browser UI</h3>
-        <p>A private, authenticated workspace where your named team members can ask deep questions across the records and get answers that link straight to the source material behind them, for the length of the engagement.</p>
+        <p>A private, authenticated workspace where up to three named recipients can ask deep questions across the records and get answers that link straight to the source material behind them, for 30 days after delivery of the brief.</p>
         <p>For a sample of how it works, visit <a href="https://syntheticorp.braindump.vip/" target="_blank" rel="noopener noreferrer">here</a>.</p>
       </article>
       <article class="panel">
         <h3>Deletion confirmation</h3>
-      <p>At closeout, hosted access is removed and workspace materials are deleted, with written confirmation to your team.</p>
+      <p>You receive your exact destruction date in writing at delivery — 30 days after the brief. On that date, hosted access is removed and all engagement materials, including our own copy of the brief, are destroyed, with written confirmation to your team. Earlier destruction is available on request at any time.</p>
       </article>
     </section>
 
@@ -544,7 +544,7 @@
       <article class="step">
         <strong>Step 1</strong>
         <h3>Scope and sign</h3>
-        <p>We review the departure event together, identify data sources, timeline, sensitive-material rules, SOW, and data authority.</p>
+        <p>We review the departure event together, identify data sources, timeline, sensitive-material rules, SOW, and data authority. A short intake — about fifteen minutes — captures the exact terms that become your signing documents.</p>
       </article>
       <article class="step">
         <strong>Step 2</strong>
@@ -559,7 +559,7 @@
       <article class="step">
         <strong>Step 4</strong>
         <h3>Deliver and close</h3>
-        <p>Your team receives the brief, evidence trail, workspace access, walkthrough, and deletion confirmation at closeout.</p>
+        <p>Your team receives the brief, evidence trail, workspace access, walkthrough, and the exact destruction date in writing.</p>
       </article>
     </section>
 
@@ -571,7 +571,9 @@
         "none." This means your records are processed inside AWS only to produce your brief: prompts
         and outputs are not written to durable storage, are not used to train AI models, and are not
         shared with any outside model provider for their own use. It is built for sensitive corporate
-        records, not consumer chatbot use.
+        records, not consumer chatbot use. The entire pipeline — storage, processing, and the client
+        workspace — runs in United States AWS regions, and the no-retention posture is a contractual
+        service commitment, not just a configuration switch.
       </p>
       <p class="description">
         Every engagement stays single-client: written data authority, controlled intake, Bedrock
@@ -585,8 +587,8 @@
         <div class="flow-node"><strong>Client-controlled upload</strong><span>Encrypted archive, separate passphrase channel, file-integrity check.</span></div>
         <div class="flow-node"><strong>Encrypted vault</strong><span>Per-engagement encrypted storage for receipt, conversion, extraction, and review.</span></div>
         <div class="flow-node"><strong>No-retention AI &amp; review</strong><span>Records are processed in Amazon Bedrock with retention set to "none." Citations, coverage, and deliverables are human-reviewed before delivery.</span></div>
-        <div class="flow-node"><strong>Source-linked query browser UI</strong><span>Named users can ask follow-up questions and inspect source-cited evidence for 30 days after workspace activation.</span></div>
-        <div class="flow-node"><strong>Deletion closeout</strong><span>Hosted access removed, workspace materials deleted, and written confirmation to your team.</span></div>
+        <div class="flow-node"><strong>Source-linked query browser UI</strong><span>Named users can ask follow-up questions and inspect source-cited evidence for 30 days after delivery of the brief.</span></div>
+        <div class="flow-node"><strong>Deletion closeout</strong><span>Exact destruction date stated in writing at delivery; hosted access removed, all materials destroyed, and written confirmation to your team.</span></div>
       </div>
     </section>
 
@@ -647,14 +649,14 @@
           <p><strong>Encrypted before it ever reaches us.</strong> You package and encrypt your data before it leaves your building, following a process we provide. It's protected in transit and at rest, so it's never exposed at any point in the handoff.</p>
           <p><strong>Least-privilege access.</strong> Only the people and processes required to produce your brief can touch your data, nothing more. There's no sprawling internal access and no third parties in the pipeline, which means the smallest possible attack surface.</p>
           <p><strong>Every engagement is fully isolated.</strong> Each client runs in a dedicated per-engagement workspace on AWS, created for that engagement and destroyed when it ends. Nothing is shared between clients, so there's no possibility of cross-contamination.</p>
-          <p><strong>When the engagement ends, we destroy everything.</strong> All source material and all results are permanently destroyed at the close of the project. We keep no copy of your data, and nothing about your engagement remains in our systems.</p>
+          <p><strong>When the engagement ends, we destroy everything.</strong> All source material and all results — including our own copy of the brief — are permanently destroyed on the destruction date stated in writing at delivery. We keep no copy of your data or the brief; the only records we retain are contentless engagement and billing documents.</p>
         </div>
       </details>
 
       <details>
         <summary>How do you protect sensitive and private information?</summary>
         <div class="faq-body">
-          <p><strong>We focus on work knowledge, not personal information.</strong> The goal is professional continuity: decisions, context, and institutional knowledge the company needs to keep running. We take deliberate steps to filter out personal and unrelated content, keeping the brief focused on what the business actually needs.</p>
+          <p><strong>We focus on work knowledge, not personal information.</strong> The goal is professional continuity: decisions, context, and institutional knowledge the company needs to keep running. Standard screening automatically redacts, excludes, or quarantines sensitive categories — health, legal privilege, family and minors, HR and personnel, investigations — and excluded material is never analyzed. It is included only on written direction from your data authority, keeping the brief focused on what the business actually needs.</p>
           <p><strong>You define the scope. Information stays inside company boundaries.</strong> We work only with data the company already owns and has the right to access: its own systems, accounts, and records.</p>
           <p><strong>Trust works best in the open, not in secret.</strong> The strongest engagements are ones where the departing employee knows their knowledge is being preserved for the team. Handled transparently, this is a professional handoff, not employee surveillance.</p>
           <p><strong>Your rules govern the engagement.</strong> You remain in charge of what's collected and how the results are used. We build the process to fit your privacy, HR, and legal requirements, not to work around them.</p>

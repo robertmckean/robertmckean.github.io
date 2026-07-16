@@ -529,9 +529,9 @@
           <div>
             <h2>Protected workspace</h2>
             <ul>
-              <li>Temporary single-client DigitalOcean workspace, protected by Cloudflare Access.</li>
-              <li>Named users get authenticated access for follow-up questions.</li>
-              <li>Hosted access is removed and workspace materials are deleted at closeout.</li>
+              <li>Temporary single-client AWS workspace, protected by Cloudflare Access.</li>
+              <li>Up to three named recipients get authenticated access for follow-up questions, for 30 days after delivery.</li>
+              <li>Everything is destroyed on the written destruction date, with confirmation to your team.</li>
             </ul>
           </div>
         </section>
@@ -545,13 +545,14 @@
         <div class="stamp green">Deletion confirmed</div>
       </section>
 
-      <section class="stop-panel" aria-label="Sensitive material stop gate">
+      <section class="stop-panel" aria-label="Sensitive material screening">
         <div class="stop-sign">STOP</div>
         <div>
-          <h2>Unexpected sensitive material stops the workflow.</h2>
+          <h2>Sensitive material stops here — not your engagement.</h2>
           <p>
-            If screening surfaces legal, HR, medical, privileged, investigation, regulated, or other
-            sensitive material outside the agreed scope, processing pauses until your team gives written direction.
+            Screening automatically redacts, excludes, or quarantines legal, HR, medical, privileged,
+            investigation, and other sensitive categories. Excluded material is never analyzed, and the
+            work continues. It is included only if your data authority directs it in writing.
           </p>
         </div>
       </section>
@@ -561,6 +562,7 @@
         <div class="never-card"><strong>Records stay in the vault</strong> Client records, secrets, and engagement data live only in the encrypted vault, kept out of code, repositories, and screenshots.</div>
         <div class="never-card"><strong>Bedrock no-retention path</strong> Approved record text is processed through Amazon Bedrock with account data retention set to none; prompts and outputs are not shared with model providers or used to train base models.</div>
         <div class="never-card"><strong>Time-boxed, named access</strong> Workspace access is temporary, authenticated, and limited to named users.</div>
+        <div class="never-card"><strong>US-region pipeline</strong> Storage, processing, and the client workspace run in United States AWS regions.</div>
         <div class="never-card"><strong>Deletion confirmed in writing</strong> After hosted access and workspace materials are removed, your team receives written confirmation.</div>
       </section>
     </article>
